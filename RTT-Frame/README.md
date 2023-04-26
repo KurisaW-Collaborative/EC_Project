@@ -8,7 +8,7 @@
     	|--RTT-Frame
     		|--application
     		|--visual
-			|--mvctrl
+		|--mvctrl
     		|--Cloud service
     		|--UI design
     		|--Sensor code
