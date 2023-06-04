@@ -15,6 +15,7 @@ extern "C" {
 #endif
 
 #include "mpu9250_config.h"
+#include "stm32f4xx_hal.h"
 
 #include <stdlib.h>
 

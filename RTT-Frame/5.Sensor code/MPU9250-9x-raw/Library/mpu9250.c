@@ -10,15 +10,12 @@
 
 #include <rtthread.h>
 #include <rtdevice.h>
-//#include "stm32f4xx_hal_conf.h"
 
 #include "MPU9250.h"
 #include "mpu9250_config.h"
 
 #define mpu_select()    rt_pin_write(MPU9250_CS_PIN, PIN_LOW)
 #define mpu_deselect()  rt_pin_write(MPU9250_CS_PIN, PIN_HIGH)
-
-SPI_HandleTypeDef hspi1;
 
 #define DATABUF_SIZ     16
 

@@ -12,13 +12,17 @@
 #include "mpu9250.h"
 #include "mpu9250_config.h"
 
-uint8_t ak8963_WhoAmI = 0;
-uint8_t mpu9250_WhoAmI = 0;
-MPU9250 mpu;
+static uint8_t ak8963_WhoAmI = 0;
+static uint8_t mpu9250_WhoAmI = 0;
+static MPU9250 mpu;
+
+SPI_HandleTypeDef hspi1;
 
 /* Init function */
-static int mpu9250_init()
+static int mpu9250_drv_init(int argc, char *argv[])
 {
+    MX_SPI1_Init();
+
     MPU9250_Init(&mpu);
 
     while(1)
@@ -44,7 +48,45 @@ static int mpu9250_init()
                 mpu.mpu_data.Magn[1], mpu.mpu_data.Magn[2]);
         rt_kprintf("*************************\n");
 
-        HAL_Delay(50);
+        rt_thread_mdelay(50);
     }
 }
-MSH_CMD_EXPORT(mpu9250_init, mpu9250 sensor init function);
+MSH_CMD_EXPORT(mpu9250_drv_init, mpu9250 sensor init function);
+
+/**
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+void MX_SPI1_Init(void)
+{
+
+  /* USER CODE BEGIN SPI1_Init 0 */
+
+  /* USER CODE END SPI1_Init 0 */
+
+  /* USER CODE BEGIN SPI1_Init 1 */
+
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI1_Init 2 */
+
+  /* USER CODE END SPI1_Init 2 */
+
+}

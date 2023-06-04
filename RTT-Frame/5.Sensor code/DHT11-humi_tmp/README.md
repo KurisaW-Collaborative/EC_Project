@@ -1,4 +1,4 @@
-# XXX-Sensor Driver
+# DHT11-Sensor Driver
 
 ---
 
@@ -7,10 +7,13 @@
    -EC_Project
     	|--RTT-Frame
     		|--Sensor code
-    			|--GP2Y-PM2.5(Sensor)
-    				|--xxx.c
-    				|--xxx.h
-    				|--xxx_sample.c
+    			|--dht11_drv(Sensor)
+    				|--Library
+        				|--dht11.c
+        				|--dht11.h
+    				|--Example
+        				|--dht11_config.c
+        				|--dht11_cofig.c
 ```
 
-文件上传遵循该目录结构，其中xxx.c、xxx.h为驱动代码，xxx_sample.c为用户扩展API函数
+文件上传遵循该目录结构，其中Library为驱动代码，Example为用户扩展API函数及测试代码

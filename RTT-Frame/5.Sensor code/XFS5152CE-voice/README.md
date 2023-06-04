@@ -1,4 +1,4 @@
-# XXX-Sensor Driver
+# XFS5152CE_Vol-Sensor Driver
 
 ---
 
@@ -7,10 +7,13 @@
    -EC_Project
     	|--RTT-Frame
     		|--Sensor code
-    			|--xxx(Sensor)
-    				|--xxx.c
-    				|--xxx.h
-    				|--xxx_sample.c
+    			|--xfs5152ce_vol_drv(Sensor)
+    				|--Library
+        				|--xfs5152ce_vol.c
+        				|--xfs5152ce_vol.h
+    				|--Example
+        				|--xfs5152ce_vol_config.c
+        				|--xfs5152ce_vol_cofig.c
 ```
 
-文件上传遵循该目录结构，其中xxx.c、xxx.h为驱动代码，xxx_sample.c为用户扩展API函数
+文件上传遵循该目录结构，其中Library为驱动代码，Example为用户扩展API函数及测试代码
