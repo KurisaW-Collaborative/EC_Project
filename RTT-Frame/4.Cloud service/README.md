@@ -1,19 +1,3 @@
-# Cloud service
+Example为示例，并且包含了自己实现的发送接收接口（感觉并没有比软件包方便多少）
 
----
-```c
-目录结构：
-   -EC_Project
-    	|--RTT-Frame
-    		|--Cloud service
-    			|--libraries
-               		|--inc
-               		|--src
-    			|--ports
-    				|--xxx_sample.c
-            ...
-          |--APP
-            |--user_application.c
-            |--user_application.h
-            ...
-```
+Library为示例所使用的软件包
