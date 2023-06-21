@@ -10,19 +10,19 @@
 #ifndef APPLICATIONS_ENCODER_READ_H_
 #define APPLICATIONS_ENCODER_READ_H_
 
-//#define USER_ENCODER_AVERAGE      /* 是否开启脉冲均值数计算 */
+#include <rtthread.h>
+#include <rtdevice.h>
+#include <board.h>
 
 struct pulse_dev
 {
-    rt_device_t lfp_dev;      /* 左前轮脉冲编码器设备 */
-    rt_device_t rfp_dev;      /* 右前轮脉冲编码器设备 */
-    rt_device_t lbp_dev;      /* 左后轮脉冲编码器设备 */
-    rt_device_t rbp_dev;      /* 右后轮脉冲编码器设备 */
+    rt_device_t pulse_dev_name;
+    rt_int8_t index;
 };
 
 struct pulse_dev_handle
 {
-    char pulse_dev_handle_name[20];
+    rt_device_t pulse_dev_handle_name;
     rt_int8_t index;
 };
 

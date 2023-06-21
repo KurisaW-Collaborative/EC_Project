@@ -7,19 +7,18 @@
  * Date           Author       Notes
  * 2023-06-20     Yifang       the first version
  */
-#include <rtthread.h>
-#include <rtdevice.h>
-#include <board.h>
 #include "encoder_read.h"
 
-struct pulse_dev car_pulse_dev = {
-    .lfp_dev = "pulse2",
-    .rfp_dev = "pulse3",
-    .lbp_dev = "pulse4",
-    .rbp_dev = "pulse5"
+struct pulse_dev car_pulse_dev[4] = {
+    { ("pulse2"), 1 },
+    { ("pulse3"), 2 },
+    { ("pulse4"), 3 },
+    { ("pulse5"), 4 }
 };
 
-struct pulse_dev_handle pulse_encoder_dev[4];
+struct pulse_dev_handle pulse_dev_handle_list[4];
+
+//rt_device_t car_pulse_dev_handle
 
 int pulse_encoder_dev_read(void *parameter)
 {
@@ -33,68 +32,78 @@ int pulse_encoder_dev_read(void *parameter)
     void MX_TIM4_Init(void);
     void MX_TIM5_Init(void);
 
-    /* 脉冲设备句柄初始化 */
+    /* 脉冲设备初始化 */
     for (i = 0; i < 4; i++)
     {
-        pulse_encoder_dev[i].index = i + 1;
-        snprintf(pulse_encoder_dev[i].pulse_dev_handle_name, sizeof(pulse_encoder_dev[i].pulse_dev_handle_name),
-                 "pulse_encoder_dev%d", i + 1);
+        pulse_dev_handle_list[i].pulse_dev_handle_name = RT_NULL;
+        rt_kprintf("car_pulse_dev[%d].pulse_dev_name = %s\n", i, car_pulse_dev[i].pulse_dev_name);
+        rt_kprintf("pulse_dev_handle_list[%d].pulse_dev_handle_name = %s\n", i, pulse_dev_handle_list[i].pulse_dev_handle_name);
     }
 
-    rt_device_t pulse_encoder_dev1 = RT_NULL;   /* 脉冲编码器设备句柄 */
-    rt_device_t pulse_encoder_dev2 = RT_NULL;   /* 脉冲编码器设备句柄 */
-    rt_device_t pulse_encoder_dev3 = RT_NULL;   /* 脉冲编码器设备句柄 */
-    rt_device_t pulse_encoder_dev4 = RT_NULL;   /* 脉冲编码器设备句柄 */
-
     /* 查找脉冲编码器设备并传回设备句柄 */
-    pulse_encoder_dev1 = rt_device_find(car_pulse_dev.lbp_dev);
-    pulse_encoder_dev2 = rt_device_find(car_pulse_dev.lfp_dev);
-    pulse_encoder_dev3 = rt_device_find(car_pulse_dev.rbp_dev);
-    pulse_encoder_dev4 = rt_device_find(car_pulse_dev.rfp_dev);
+    for (i = 0; i < 4; i++)
+    {
+        rt_device_t dev1_handle = RT_NULL;
 
-    RT_ASSERT(pulse_encoder_dev1 != RT_NULL);
-    RT_ASSERT(pulse_encoder_dev2 != RT_NULL);
-    RT_ASSERT(pulse_encoder_dev3 != RT_NULL);
-    RT_ASSERT(pulse_encoder_dev4 != RT_NULL);
+        pulse_dev_handle_list[i].index = i;
+        pulse_dev_handle_list[i].pulse_dev_handle_name = (rt_device_t)rt_device_find(car_pulse_dev[i].pulse_dev_name);
+        if (pulse_dev_handle_list[i].pulse_dev_handle_name == RT_NULL)
+        {
+            rt_kprintf("find %s device handle failed!\n", pulse_dev_handle_list[i].pulse_dev_handle_name);
+            rt_kprintf("%s\n",pulse_dev_handle_list[i].pulse_dev_handle_name);
+            return ret;
+        }
+        else
+        {
+            rt_kprintf("find %s device handle succeed!\n", pulse_dev_handle_list[i].pulse_dev_handle_name);
+            rt_kprintf("%s\n",pulse_dev_handle_list[i].pulse_dev_handle_name);
+        }
+    }
+
+    /* RT_ASSERT pulse encoder dev */
+    for (i = 0; i < 4; i++)
+    {
+        RT_ASSERT(car_pulse_dev[i].pulse_dev_name != RT_NULL);
+    }
 
     /* 以只读方式打开设备 */
     for (i = 0; i < 4; i++)
     {
-        ret = rt_device_open(pulse_encoder_dev[i].pulse_dev_handle_name, RT_DEVICE_OFLAG_RDONLY);
+        ret = rt_device_open(pulse_dev_handle_list[i].pulse_dev_handle_name, RT_DEVICE_OFLAG_RDONLY);
         if (ret != RT_EOK)
         {
-            rt_kprintf("open %s device failed!\n", pulse_encoder_dev[i].pulse_dev_handle_name);
+            rt_kprintf("open %s device handle failed!\n", pulse_dev_handle_list[i].pulse_dev_handle_name);
             return ret;
         }
     }
 
-    for (index = 0; index <= 10; index++)
+    for (index = 0; index <= 100; index++)
     {
-        rt_thread_mdelay(500);
+        rt_thread_mdelay(100);
         /* 读取脉冲编码器计数值 */
         ret = RT_EOK;
 
 #ifndef USER_ENCODER_AVERAGE
         for (i = 0; i < 4; i++)
         {
-            ret = rt_device_read(pulse_encoder_dev[i].pulse_dev_handle_name, 0, &count, 1);
-            if (ret != RT_EOK)
+            ret = rt_device_read(pulse_dev_handle_list[i].pulse_dev_handle_name, 0, &count, 1);
+            if (ret == RT_NULL)
             {
-                rt_kprintf("read %s device failed!\n", pulse_encoder_dev[i].pulse_dev_handle_name);
+                rt_kprintf("read %s device handle failed!\n", pulse_dev_handle_list[i].pulse_dev_handle_name);
                 return ret;
             }
             else
             {
-                rt_kprintf("Get %s: count %d\n", pulse_encoder_dev[i].pulse_dev_handle_name, count);
+                rt_kprintf("Get %s: count %d\n", pulse_dev_handle_list[i].pulse_dev_handle_name, count);
             }
         }
 #else
         for (i = 0; i < 4; i++)
         {
-            ret = rt_device_read(pulse_encoder_dev[i].pulse_dev_handle_name, 0, &count, 1);
-            if (ret != RT_EOK)
+            ret = rt_device_read(pulse_dev_handle_list[i].pulse_dev_handle_name, 0, &count, 1);
+            if (ret == RT_NULL)
             {
-                rt_kprintf("read %s device failed!\n", pulse_encoder_dev[i].pulse_dev_handle_name);
+                rt_kprintf("read %s device handle failed!\n", pulse_dev_handle_list[i].pulse_dev_handle_name);
                 return ret;
             }
             count += count;
@@ -105,16 +114,17 @@ int pulse_encoder_dev_read(void *parameter)
         /* 清空脉冲编码器计数值 */
         for (i = 0; i < 4; i++)
         {
-            rt_device_control(pulse_encoder_dev[i].pulse_dev_handle_name, PULSE_ENCODER_CMD_CLEAR_COUNT, RT_NULL);
+            rt_device_control(pulse_dev_handle_list[i].pulse_dev_handle_name, PULSE_ENCODER_CMD_CLEAR_COUNT, RT_NULL);
         }
     }
 
+    /* 关闭编码器设备 */
     for (i = 0; i < 4; i++)
     {
-        ret = rt_device_close(pulse_encoder_dev[i].pulse_dev_handle_name);
+        ret = rt_device_close(pulse_dev_handle_list[i].pulse_dev_handle_name);
         if (ret != RT_EOK)
         {
-            rt_kprintf("close %s device failed!\n", pulse_encoder_dev[i].pulse_dev_handle_name);
+            rt_kprintf("close %s device handle failed!\n", pulse_dev_handle_list[i].pulse_dev_handle_name);
             return ret;
         }
     }
@@ -123,3 +133,4 @@ int pulse_encoder_dev_read(void *parameter)
 }
 /* 导出到 msh 命令列表中 */
 MSH_CMD_EXPORT(pulse_encoder_dev_read, pulse encoder read);
+//INIT_APP_EXPORT(pulse_encoder_dev_read);
