@@ -47,8 +47,8 @@ int user_pwm_init(void)
 
     return ret;
 }
-//INIT_APP_EXPORT(user_pwm_init);
-MSH_CMD_EXPORT(user_pwm_init,user_pwm_init);
+INIT_APP_EXPORT(user_pwm_init);
+//MSH_CMD_EXPORT(user_pwm_init,user_pwm_init);
 
 /* pwm set pulse with user's configuration,and it can be modify! */
 int pwm_ex_set_pulse(int argc,char **argv)

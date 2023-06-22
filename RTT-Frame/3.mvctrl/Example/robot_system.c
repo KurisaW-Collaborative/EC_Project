@@ -7,9 +7,3 @@
  * Date           Author       Notes
  * 2023-06-22     Yifang       the first version
  */
-#ifndef APPLICATIONS_MPU9250_CONFIG_H_
-#define APPLICATIONS_MPU9250_CONFIG_H_
-
-
-
-#endif /* APPLICATIONS_MPU9250_CONFIG_H_ */
