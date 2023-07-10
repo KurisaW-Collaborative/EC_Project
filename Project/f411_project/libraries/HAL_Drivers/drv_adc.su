@@ -1,0 +1,6 @@
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_adc.c:49:17:stm32_adc_get_channel	16	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_adc.c:141:17:stm32_adc_enabled	56	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_adc.c:223:19:stm32_adc_get_resolution	24	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_adc.c:256:19:stm32_adc_get_vref	32	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_adc.c:286:17:stm32_adc_get_value	32	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_adc.c:312:12:stm32_adc_init	24	static

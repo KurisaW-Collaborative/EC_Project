@@ -1,0 +1,8 @@
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:49:13:stm32_i2c_gpio_init	24	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:66:13:stm32_set_sda	24	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:85:13:stm32_set_scl	24	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:103:19:stm32_get_sda	24	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:114:19:stm32_get_scl	24	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:124:13:stm32_udelay	40	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:173:17:stm32_i2c_bus_unlock	24	static
+D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_soft_i2c.c:196:5:rt_hw_i2c_init	24	static

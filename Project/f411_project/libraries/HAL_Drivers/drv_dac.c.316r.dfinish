@@ -1,0 +1,2274 @@
+
+;; Function stm32_dac_get_channel (stm32_dac_get_channel, funcdef_no=338, decl_uid=13928, cgraph_uid=341, symbol_order=342)
+
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 61 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 61 4 62 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [21  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":41:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [21  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 62 61 63 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":41:1 7 {*arm_addsi3}
+     (nil))
+(insn 63 62 64 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":41:1 379 {stack_tie}
+     (nil))
+(insn/f 64 63 65 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":41:1 7 {*arm_addsi3}
+     (nil))
+(note 65 64 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 65 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [4 channel+0 S4 A32])
+        (reg:SI 0 r0 [ channel ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":41:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (parallel [
+            (set (reg:SI 3 r3 [115])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":42:17 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 7 6 8 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [4 stm32_channel+0 S4 A32])
+        (reg:SI 3 r3 [115])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":42:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 3 r3 [116])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":44:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [116])
+            (const_int 1 [0x1]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":44:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":44:5 273 {arm_cond_branch}
+     (nil)
+ -> 18)
+(note 11 10 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (set (reg:SI 3 r3 [117])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":44:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 3 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [117])
+            (const_int 2 [0x2]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":44:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 14 13 50 3 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":44:5 273 {arm_cond_branch}
+     (nil)
+ -> 24)
+(note 50 14 52 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 52 50 53 4 (set (pc)
+        (label_ref 51)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":44:5 284 {*arm_jump}
+     (nil)
+ -> 51)
+(barrier 53 52 18)
+(code_label 18 53 19 5 2 (nil) [1 uses])
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (parallel [
+            (set (reg:SI 3 r3 [118])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":47:23 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 21 20 54 5 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [4 stm32_channel+0 S4 A32])
+        (reg:SI 3 r3 [118])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":47:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 54 21 55 5 (set (pc)
+        (label_ref 37)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":48:9 284 {*arm_jump}
+     (nil)
+ -> 37)
+(barrier 55 54 24)
+(code_label 24 55 25 6 3 (nil) [1 uses])
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 6 (parallel [
+            (set (reg:SI 3 r3 [119])
+                (const_int 16 [0x10]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":50:23 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 27 26 56 6 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [4 stm32_channel+0 S4 A32])
+        (reg:SI 3 r3 [119])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":50:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 56 27 57 6 (set (pc)
+        (label_ref 37)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":51:9 284 {*arm_jump}
+     (nil)
+ -> 37)
+(barrier 57 56 51)
+(code_label 51 57 32 7 8 (nil) [1 uses])
+(note 32 51 33 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 7 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 53 [0x35]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":53:9 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 34 33 35 7 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 75) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":53:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 36 7 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":53:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 36 35 59 7 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 06e55900 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":53:9 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 59 36 37 7 (const_int 0 [0]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":54:9 311 {nop}
+     (nil))
+(code_label 37 59 38 8 5 (nil) [2 uses])
+(note 38 37 39 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 46 8 (set (reg:SI 3 r3 [orig:113 _9 ] [113])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [4 stm32_channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":57:12 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 46 39 47 8 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:114 <retval> ] [114])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":58:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 47 46 66 8 (use (reg/i:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":58:1 -1
+     (nil))
+(note 66 47 67 8 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 67 66 68 8 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":58:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 68 67 69 8 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":58:1 301 {blockage}
+     (nil))
+(insn/f 69 68 70 8 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":58:1 728 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 70 69 71 8 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":58:1 397 {force_register_use}
+     (nil))
+(jump_insn 71 70 72 8 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [21  S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":58:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 72 71 73)
+(code_label 73 72 74 10 (nil) [0 uses])
+(insn 74 73 75 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 385 {align_4}
+     (nil))
+(code_label 75 74 76 9 (nil) [0 uses])
+(insn 76 75 77 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.4") [flags 0x2]  <var_decl 0790b948 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 77 76 78 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0796db58 *.LC0>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 78 77 79 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 387 {consttable_end}
+     (nil))
+(barrier 79 78 60)
+(note 60 79 0 NOTE_INSN_DELETED)
+
+;; Function stm32_dac_enabled (stm32_dac_enabled, funcdef_no=339, decl_uid=13938, cgraph_uid=342, symbol_order=343)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 65 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 65 5 66 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [21  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":61:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [21  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 66 65 67 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":61:1 7 {*arm_addsi3}
+     (nil))
+(insn 67 66 68 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":61:1 379 {stack_tie}
+     (nil))
+(insn/f 68 67 69 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":61:1 7 {*arm_addsi3}
+     (nil))
+(note 69 68 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 69 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])
+        (reg:SI 0 r0 [ device ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":61:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])
+        (reg:SI 1 r1 [ channel ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":61:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":64:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [115])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":64:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":64:5 273 {arm_cond_branch}
+     (nil)
+ -> 15)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 64 [0x40]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":64:5 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 79) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":64:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":64:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 14 13 15 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 06e55900 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":64:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 15 14 16 4 12 (nil) [1 uses])
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg/f:SI 3 r3 [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":65:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 4 (set (reg/f:SI 3 r3 [117])
+        (mem/f:SI (plus:SI (reg/f:SI 3 r3 [116])
+                (const_int 60 [0x3c])) [19 device_4(D)->parent.user_data+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":65:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 22 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [22 stm32_dac_handler+0 S4 A32])
+        (reg/f:SI 3 r3 [117])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":65:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 19 23 4 (set (reg:SI 3 r3 [118])
+        (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":68:8 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [118])
+            (const_int 2 [0x2]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":68:8 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 24 23 25 4 (set (pc)
+        (if_then_else (gtu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":68:8 273 {arm_cond_branch}
+     (nil)
+ -> 35)
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 5 (set (reg:SI 3 r3 [119])
+        (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":68:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [119])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":68:24 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":68:24 273 {arm_cond_branch}
+     (nil)
+ -> 35)
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:SI 0 r0)
+        (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":71:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 31 30 32 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stm32_dac_get_channel") [flags 0x3]  <function_decl 0790ca80 stm32_dac_get_channel>) [0 stm32_dac_get_channel S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":71:24 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 32 31 61 6 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 dac_channel+0 S4 A32])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":71:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 61 32 48 6 (const_int 0 [0]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":71:21 311 {nop}
+     (nil))
+(insn 48 61 49 6 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 dac_channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":78:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 49 48 50 6 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [22 stm32_dac_handler+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":78:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 50 49 51 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DAC_Start") [flags 0x41]  <function_decl 07560080 HAL_DAC_Start>) [0 HAL_DAC_Start S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":78:5 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 51 50 62 6 (parallel [
+            (set (reg:SI 3 r3 [orig:113 _1 ] [113])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":81:12 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 62 51 63 6 (set (pc)
+        (label_ref 52)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":81:12 284 {*arm_jump}
+     (nil)
+ -> 52)
+(barrier 63 62 35)
+(code_label 35 63 36 7 13 (nil) [2 uses])
+(note 36 35 37 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 7 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":75:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 38 37 39 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":75:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 39 38 40 7 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 12 [0xc]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":75:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 40 39 41 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":75:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 41 40 42 7 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 16 [0x10]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":75:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 42 41 43 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":75:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 43 42 52 7 (set (reg:SI 3 r3 [orig:113 _1 ] [113])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":76:14 728 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 52 43 53 8 15 (nil) [1 uses])
+(note 53 52 58 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 58 53 59 8 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:114 <retval> ] [114])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":82:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 59 58 70 8 (use (reg/i:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":82:1 -1
+     (nil))
+(note 70 59 71 8 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 71 70 72 8 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":82:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 72 71 73 8 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":82:1 301 {blockage}
+     (nil))
+(insn/f 73 72 74 8 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":82:1 728 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 74 73 75 8 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":82:1 397 {force_register_use}
+     (nil))
+(jump_insn 75 74 76 8 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [21  S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":82:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 76 75 77)
+(code_label 77 76 78 17 (nil) [0 uses])
+(insn 78 77 79 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 385 {align_4}
+     (nil))
+(code_label 79 78 80 16 (nil) [0 uses])
+(insn 80 79 81 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.3") [flags 0x2]  <var_decl 0790ba50 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 81 80 82 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0796dbb0 *.LC1>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 82 81 83 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0796dc08 *.LC2>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 83 82 84 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0796dc60 *.LC3>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 84 83 85 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0796dcb8 *.LC4>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 85 84 86 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 387 {consttable_end}
+     (nil))
+(barrier 86 85 64)
+(note 64 86 0 NOTE_INSN_DELETED)
+
+;; Function stm32_dac_disabled (stm32_dac_disabled, funcdef_no=340, decl_uid=13945, cgraph_uid=343, symbol_order=344)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 65 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 65 5 66 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [21  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":85:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [21  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 66 65 67 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":85:1 7 {*arm_addsi3}
+     (nil))
+(insn 67 66 68 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":85:1 379 {stack_tie}
+     (nil))
+(insn/f 68 67 69 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":85:1 7 {*arm_addsi3}
+     (nil))
+(note 69 68 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 69 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])
+        (reg:SI 0 r0 [ device ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":85:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])
+        (reg:SI 1 r1 [ channel ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":85:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":88:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [115])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":88:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":88:5 273 {arm_cond_branch}
+     (nil)
+ -> 15)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 88 [0x58]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":88:5 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 79) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":88:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":88:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 14 13 15 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 06e55900 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":88:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 15 14 16 4 19 (nil) [1 uses])
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg/f:SI 3 r3 [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":89:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 4 (set (reg/f:SI 3 r3 [117])
+        (mem/f:SI (plus:SI (reg/f:SI 3 r3 [116])
+                (const_int 60 [0x3c])) [19 device_4(D)->parent.user_data+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":89:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 22 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [22 stm32_dac_handler+0 S4 A32])
+        (reg/f:SI 3 r3 [117])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":89:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 19 23 4 (set (reg:SI 3 r3 [118])
+        (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":92:8 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [118])
+            (const_int 2 [0x2]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":92:8 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 24 23 25 4 (set (pc)
+        (if_then_else (gtu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":92:8 273 {arm_cond_branch}
+     (nil)
+ -> 35)
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 5 (set (reg:SI 3 r3 [119])
+        (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":92:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [119])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":92:24 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":92:24 273 {arm_cond_branch}
+     (nil)
+ -> 35)
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:SI 0 r0)
+        (mem/c:SI (reg/f:SI 7 r7) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":95:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 31 30 32 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stm32_dac_get_channel") [flags 0x3]  <function_decl 0790ca80 stm32_dac_get_channel>) [0 stm32_dac_get_channel S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":95:24 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 32 31 61 6 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 dac_channel+0 S4 A32])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":95:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 61 32 48 6 (const_int 0 [0]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":95:21 311 {nop}
+     (nil))
+(insn 48 61 49 6 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 dac_channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":102:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 49 48 50 6 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [22 stm32_dac_handler+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":102:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 50 49 51 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DAC_Stop") [flags 0x41]  <function_decl 07560100 HAL_DAC_Stop>) [0 HAL_DAC_Stop S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":102:5 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 51 50 62 6 (parallel [
+            (set (reg:SI 3 r3 [orig:113 _1 ] [113])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":105:12 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 62 51 63 6 (set (pc)
+        (label_ref 52)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":105:12 284 {*arm_jump}
+     (nil)
+ -> 52)
+(barrier 63 62 35)
+(code_label 35 63 36 7 20 (nil) [2 uses])
+(note 36 35 37 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 7 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":99:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 38 37 39 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":99:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 39 38 40 7 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 12 [0xc]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":99:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 40 39 41 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":99:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 41 40 42 7 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 79)
+                    (const_int 16 [0x10]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":99:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 42 41 43 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":99:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 43 42 52 7 (set (reg:SI 3 r3 [orig:113 _1 ] [113])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":100:14 728 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 52 43 53 8 22 (nil) [1 uses])
+(note 53 52 58 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 58 53 59 8 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:114 <retval> ] [114])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":106:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 59 58 70 8 (use (reg/i:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":106:1 -1
+     (nil))
+(note 70 59 71 8 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 71 70 72 8 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":106:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 72 71 73 8 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":106:1 301 {blockage}
+     (nil))
+(insn/f 73 72 74 8 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":106:1 728 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 74 73 75 8 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":106:1 397 {force_register_use}
+     (nil))
+(jump_insn 75 74 76 8 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [21  S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":106:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 76 75 77)
+(code_label 77 76 78 24 (nil) [0 uses])
+(insn 78 77 79 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 385 {align_4}
+     (nil))
+(code_label 79 78 80 23 (nil) [0 uses])
+(insn 80 79 81 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.2") [flags 0x2]  <var_decl 0790bb58 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 81 80 82 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0796dbb0 *.LC1>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 82 81 83 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0796dc08 *.LC2>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 83 82 84 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0796dc60 *.LC3>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 84 83 85 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0796dcb8 *.LC4>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 85 84 86 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 387 {consttable_end}
+     (nil))
+(barrier 86 85 64)
+(note 64 86 0 NOTE_INSN_DELETED)
+
+;; Function stm32_dac_get_resolution (stm32_dac_get_resolution, funcdef_no=341, decl_uid=13951, cgraph_uid=344, symbol_order=345)
+
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 30 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 30 4 31 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [21  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":109:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [21  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 31 30 32 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":109:1 7 {*arm_addsi3}
+     (nil))
+(insn 32 31 33 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":109:1 379 {stack_tie}
+     (nil))
+(insn/f 33 32 34 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":109:1 7 {*arm_addsi3}
+     (nil))
+(note 34 33 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 34 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])
+        (reg:SI 0 r0 [ device ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":109:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 3 r3 [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":112:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [115])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":112:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 14)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":112:5 273 {arm_cond_branch}
+     (nil)
+ -> 14)
+(note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 3 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 112 [0x70]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":112:5 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 11 10 12 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 44) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":112:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 44)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":112:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 13 12 14 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 06e55900 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":112:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 14 13 15 4 26 (nil) [1 uses])
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:SI 3 r3 [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":114:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 4 (set (reg/f:SI 3 r3 [117])
+        (mem/f:SI (plus:SI (reg/f:SI 3 r3 [116])
+                (const_int 60 [0x3c])) [19 device_2(D)->parent.user_data+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":114:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [22 stm32_dac_handler+0 S4 A32])
+        (reg/f:SI 3 r3 [117])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":114:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 26 4 (parallel [
+            (set (reg:SI 3 r3 [orig:113 _6 ] [113])
+                (const_int 12 [0xc]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":118:12 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 26 19 27 4 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:114 <retval> ] [114])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":119:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 35 4 (use (reg/i:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":119:1 -1
+     (nil))
+(note 35 27 36 4 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 36 35 37 4 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":119:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 37 36 38 4 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":119:1 301 {blockage}
+     (nil))
+(insn/f 38 37 39 4 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":119:1 728 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 39 38 40 4 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":119:1 397 {force_register_use}
+     (nil))
+(jump_insn 40 39 41 4 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [21  S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":119:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 41 40 42)
+(code_label 42 41 43 29 (nil) [0 uses])
+(insn 43 42 44 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 385 {align_4}
+     (nil))
+(code_label 44 43 45 28 (nil) [0 uses])
+(insn 45 44 46 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.1") [flags 0x2]  <var_decl 0790bc08 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 46 45 47 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0796dbb0 *.LC1>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 47 46 48 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 387 {consttable_end}
+     (nil))
+(barrier 48 47 29)
+(note 29 48 0 NOTE_INSN_DELETED)
+
+;; Function stm32_set_dac_value (stm32_set_dac_value, funcdef_no=342, decl_uid=13958, cgraph_uid=345, symbol_order=346)
+
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 139 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 139 6 140 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [21  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":122:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [21  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 140 139 141 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -64 [0xffffffffffffffc0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":122:1 7 {*arm_addsi3}
+     (nil))
+(insn 141 140 142 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":122:1 379 {stack_tie}
+     (nil))
+(insn/f 142 141 143 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":122:1 7 {*arm_addsi3}
+     (nil))
+(note 143 142 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 143 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [23 device+0 S4 A32])
+        (reg:SI 0 r0 [ device ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":122:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 channel+0 S4 A32])
+        (reg:SI 1 r1 [ channel ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":122:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [26 value+0 S4 A32])
+        (reg:SI 2 r2 [ value ])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":122:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:SI 3 r3 [119])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":127:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [119])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":127:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 16)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":127:5 273 {arm_cond_branch}
+     (nil)
+ -> 16)
+(note 11 10 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 127 [0x7f]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":127:5 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 153) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":127:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 153)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":127:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 15 14 16 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 06e55900 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":127:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 16 15 17 4 31 (nil) [1 uses])
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg:SI 3 r3 [120])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [26 value+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":128:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [120])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":128:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 26)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":128:5 273 {arm_cond_branch}
+     (nil)
+ -> 26)
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 128 [0x80]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":128:5 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 23 22 24 5 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 153) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":128:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 153)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":128:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 25 24 26 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 06e55900 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":128:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 26 25 27 6 32 (nil) [1 uses])
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 6 (set (reg/f:SI 3 r3 [121])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [23 device+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":130:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 29 28 30 6 (set (reg/f:SI 3 r3 [122])
+        (mem/f:SI (plus:SI (reg/f:SI 3 r3 [121])
+                (const_int 60 [0x3c])) [19 device_9(D)->parent.user_data+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":130:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 60 [0x3c])) [22 stm32_dac_handler+0 S4 A32])
+        (reg/f:SI 3 r3 [122])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":130:23 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 3 r3 [123])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 20 [0x14]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":132:5 7 {*arm_addsi3}
+     (nil))
+(insn 32 31 33 6 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 36 [0x24]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":132:5 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 33 32 34 6 (parallel [
+            (set (reg:SI 1 r1)
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":132:5 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 0 r0)
+        (reg:SI 3 r3 [123])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":132:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 35 34 38 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_memset") [flags 0x41]  <function_decl 06e55180 rt_memset>) [0 rt_memset S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":132:5 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 38 35 39 6 (set (reg:SI 3 r3 [124])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":135:8 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 39 38 40 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [124])
+            (const_int 2 [0x2]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":135:8 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 40 39 41 6 (set (pc)
+        (if_then_else (gtu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 51)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":135:8 273 {arm_cond_branch}
+     (nil)
+ -> 51)
+(note 41 40 42 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 7 (set (reg:SI 3 r3 [125])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":135:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 43 42 44 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [125])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":135:24 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 44 43 45 7 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 51)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":135:24 273 {arm_cond_branch}
+     (nil)
+ -> 51)
+(note 45 44 46 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 8 (set (reg:SI 0 r0)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [4 channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":138:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 47 46 48 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stm32_dac_get_channel") [flags 0x3]  <function_decl 0790ca80 stm32_dac_get_channel>) [0 stm32_dac_get_channel S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":138:24 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 48 47 125 8 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 56 [0x38])) [4 dac_channel+0 S4 A32])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":138:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 125 48 64 8 (const_int 0 [0]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":138:21 311 {nop}
+     (nil))
+(insn 64 125 65 8 (parallel [
+            (set (reg:SI 3 r3 [126])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":148:35 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 65 64 66 8 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [4 DAC_ChanConf.DAC_Trigger+0 S4 A32])
+        (reg:SI 3 r3 [126])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":148:35 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 66 65 67 8 (parallel [
+            (set (reg:SI 3 r3 [127])
+                (const_int 2 [0x2]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":149:35 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 67 66 68 8 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [4 DAC_ChanConf.DAC_OutputBuffer+0 S4 A32])
+        (reg:SI 3 r3 [127])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":149:35 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 68 67 69 8 (set (reg:SI 3 r3 [128])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 20 [0x14]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:9 7 {*arm_addsi3}
+     (nil))
+(insn 69 68 70 8 (set (reg:SI 2 r2)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 56 [0x38])) [4 dac_channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 70 69 71 8 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [128])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 71 70 72 8 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 60 [0x3c])) [22 stm32_dac_handler+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 72 71 73 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DAC_ConfigChannel") [flags 0x41]  <function_decl 07560600 HAL_DAC_ConfigChannel>) [0 HAL_DAC_ConfigChannel S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:9 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 73 72 75 8 (set (reg:SI 3 r3 [129])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 75 73 76 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:8 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 76 75 126 8 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 81)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":152:8 273 {arm_cond_branch}
+     (nil)
+ -> 81)
+(note 126 76 128 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 128 126 129 9 (set (pc)
+        (label_ref 127)) 284 {*arm_jump}
+     (nil)
+ -> 127)
+(barrier 129 128 51)
+(code_label 51 129 52 10 33 (nil) [2 uses])
+(note 52 51 53 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 10 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 153)
+                    (const_int 12 [0xc]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":142:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 54 53 55 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":142:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 55 54 56 10 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 153)
+                    (const_int 16 [0x10]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":142:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 56 55 57 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":142:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 57 56 58 10 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 153)
+                    (const_int 20 [0x14]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":142:7 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 58 57 59 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":142:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 59 58 130 10 (set (reg:SI 3 r3 [orig:117 _5 ] [117])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":143:14 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 130 59 131 10 (set (pc)
+        (label_ref 116)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":143:14 284 {*arm_jump}
+     (nil)
+ -> 116)
+(barrier 131 130 127)
+(code_label 127 131 77 11 40 (nil) [1 uses])
+(note 77 127 78 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 78 77 132 11 (set (reg:SI 3 r3 [orig:117 _5 ] [117])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":155:16 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 132 78 133 11 (set (pc)
+        (label_ref 116)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":155:16 284 {*arm_jump}
+     (nil)
+ -> 116)
+(barrier 133 132 81)
+(code_label 81 133 82 12 36 (nil) [1 uses])
+(note 82 81 83 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 12 (set (reg/f:SI 3 r3 [130])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [26 value+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 84 83 86 12 (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+        (mem:SI (reg/f:SI 3 r3 [130]) [4 *value_12(D)+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 86 84 87 12 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:9 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 87 86 88 12 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 56 [0x38])) [4 dac_channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 88 87 89 12 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 60 [0x3c])) [22 stm32_dac_handler+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 89 88 90 12 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DAC_SetValue") [flags 0x41]  <function_decl 07560300 HAL_DAC_SetValue>) [0 HAL_DAC_SetValue S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:9 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 90 89 92 12 (set (reg:SI 3 r3 [131])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 92 90 93 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:115 _3 ] [115])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:8 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 93 92 94 12 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 98)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":158:8 273 {arm_cond_branch}
+     (nil)
+ -> 98)
+(note 94 93 95 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 134 13 (set (reg:SI 3 r3 [orig:117 _5 ] [117])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":161:16 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 134 95 135 13 (set (pc)
+        (label_ref 116)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":161:16 284 {*arm_jump}
+     (nil)
+ -> 116)
+(barrier 135 134 98)
+(code_label 98 135 99 14 37 (nil) [1 uses])
+(note 99 98 100 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 100 99 101 14 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 56 [0x38])) [4 dac_channel+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":164:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 101 100 102 14 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 60 [0x3c])) [22 stm32_dac_handler+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":164:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 102 101 103 14 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DAC_Start") [flags 0x41]  <function_decl 07560080 HAL_DAC_Start>) [0 HAL_DAC_Start S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":164:9 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 103 102 105 14 (set (reg:SI 3 r3 [132])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":164:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 105 103 106 14 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:116 _4 ] [116])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":164:8 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 106 105 107 14 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 111)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":164:8 273 {arm_cond_branch}
+     (nil)
+ -> 111)
+(note 107 106 108 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 136 15 (set (reg:SI 3 r3 [orig:117 _5 ] [117])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":167:16 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 136 108 137 15 (set (pc)
+        (label_ref 116)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":167:16 284 {*arm_jump}
+     (nil)
+ -> 116)
+(barrier 137 136 111)
+(code_label 111 137 112 16 38 (nil) [1 uses])
+(note 112 111 113 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 116 16 (parallel [
+            (set (reg:SI 3 r3 [orig:117 _5 ] [117])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":170:12 1016 {*thumb2_movsi_shortim}
+     (nil))
+(code_label 116 113 117 17 39 (nil) [4 uses])
+(note 117 116 122 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 122 117 123 17 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:118 <retval> ] [118])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":171:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 123 122 144 17 (use (reg/i:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":171:1 -1
+     (nil))
+(note 144 123 145 17 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 145 144 146 17 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":171:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 64 [0x40])))
+        (nil)))
+(insn 146 145 147 17 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":171:1 301 {blockage}
+     (nil))
+(insn/f 147 146 148 17 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":171:1 728 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 148 147 149 17 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":171:1 397 {force_register_use}
+     (nil))
+(jump_insn 149 148 150 17 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [21  S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":171:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 150 149 151)
+(code_label 151 150 152 42 (nil) [0 uses])
+(insn 152 151 153 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 385 {align_4}
+     (nil))
+(code_label 153 152 154 41 (nil) [0 uses])
+(insn 154 153 155 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.0") [flags 0x2]  <var_decl 0790bd68 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 155 154 156 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0796dbb0 *.LC1>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 156 155 157 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0796dd10 *.LC5>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 157 156 158 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0796dc08 *.LC2>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 158 157 159 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0796dc60 *.LC3>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 159 158 160 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0796dcb8 *.LC4>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 160 159 161 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 387 {consttable_end}
+     (nil))
+(barrier 161 160 138)
+(note 138 161 0 NOTE_INSN_DELETED)
+
+;; Function stm32_dac_init (stm32_dac_init, funcdef_no=343, decl_uid=13966, cgraph_uid=346, symbol_order=348)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 144 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 144 3 145 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -16 [0xfffffffffffffff0]))) [21  A8])
+                (unspec:BLK [
+                        (reg:SI 4 r4)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 5 r5))
+            (use (reg/f:SI 7 r7))
+            (use (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":182:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -16 [0xfffffffffffffff0])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32])
+                    (reg:SI 4 r4))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [21  S4 A32])
+                    (reg:SI 5 r5))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 8 [0x8])) [21  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 12 [0xc])) [21  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 145 144 146 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":182:1 7 {*arm_addsi3}
+     (nil))
+(insn 146 145 147 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":182:1 379 {stack_tie}
+     (nil))
+(insn/f 147 146 148 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":182:1 7 {*arm_addsi3}
+     (nil))
+(note 148 147 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 148 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg:SI 3 r3 [121])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":183:9 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 6 5 7 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [31 result+0 S4 A32])
+        (reg:SI 3 r3 [121])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":183:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 2 r2 [122])
+        (mem:SI (label_ref 159) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":185:10 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 10 2 (set (reg:SI 3 r3 [123])
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":185:10 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 8 11 2 (parallel [
+            (set (reg:SI 0 r0)
+                (mem/u/c:SI (reg:SI 2 r2 [124]) [0  S4 A32]))
+            (set (reg:SI 1 r1)
+                (mem/u/c:SI (plus:SI (reg:SI 2 r2 [124])
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":185:10 461 {*ldm2_}
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (reg:SI 3 r3 [123]) [0 name_buf+0 S4 A64])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":185:10 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 3 r3 [123])
+                (plus:SI (reg:SI 3 r3 [123])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":185:10 1017 {*thumb2_addsi_short}
+     (nil))
+(insn 13 12 14 2 (set (mem/c:QI (reg:SI 3 r3 [123]) [0 name_buf+4 S1 A32])
+        (reg:QI 1 r1)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":185:10 263 {*arm_movqi_insn}
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg:SI 3 r3 [125])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":186:9 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])
+        (reg:SI 3 r3 [125])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":186:9 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (parallel [
+            (set (reg:SI 3 r3 [126])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:12 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 17 16 138 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])
+        (reg:SI 3 r3 [126])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:12 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 138 17 139 2 (set (pc)
+        (label_ref 121)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:5 284 {*arm_jump}
+     (nil)
+ -> 121)
+(barrier 139 138 123)
+(code_label 123 139 20 3 48 (nil) [1 uses])
+(note 20 123 21 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 23 3 (parallel [
+            (set (reg:SI 3 r3 [127])
+                (const_int 48 [0x30]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":191:21 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 23 21 24 3 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 3 [0x3])) [0 name_buf[3]+0 S1 A8])
+        (reg:QI 3 r3 [128])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":191:21 263 {*arm_movqi_insn}
+     (nil))
+(insn 24 23 25 3 (set (reg/f:SI 2 r2 [129])
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 24 26 3 (set (reg:SI 3 r3 [130])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 3 (parallel [
+            (set (reg:SI 1 r1 [132])
+                (const_int 88 [0x58]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 27 26 28 3 (set (reg:SI 3 r3 [131])
+        (mult:SI (reg:SI 1 r1 [132])
+            (reg:SI 3 r3 [130]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 56 {*mul}
+     (nil))
+(insn 28 27 29 3 (parallel [
+            (set (reg/f:SI 0 r0 [133])
+                (plus:SI (reg/f:SI 2 r2 [129])
+                    (reg:SI 3 r3 [131])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 1017 {*thumb2_addsi_short}
+     (nil))
+(insn 29 28 30 3 (set (reg/f:SI 1 r1 [134])
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 3 (set (reg:SI 2 r2 [135])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 3 (set (reg:SI 3 r3 [136])
+        (reg:SI 2 r2 [135])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 3 (parallel [
+            (set (reg:SI 3 r3 [136])
+                (ashift:SI (reg:SI 3 r3 [136])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 33 32 34 3 (set (reg:SI 3 r3 [136])
+        (plus:SI (reg:SI 3 r3 [136])
+            (reg:SI 2 r2 [135]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 7 {*arm_addsi3}
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 2 r2 [135])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 34 33 36 3 (parallel [
+            (set (reg:SI 3 r3 [137])
+                (ashift:SI (reg:SI 3 r3 [136])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 36 34 37 3 (set (reg/f:SI 3 r3 [138])
+        (plus:SI (reg:SI 3 r3 [136])
+            (reg/f:SI 1 r1 [134]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 7 {*arm_addsi3}
+     (nil))
+(insn 37 36 38 3 (set (reg:SI 4 r4 [139])
+        (reg/f:SI 0 r0 [133])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 37 39 3 (set (reg:SI 5 r5 [140])
+        (reg/f:SI 3 r3 [138])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 39 38 40 3 (parallel [
+            (set (reg:SI 5 r5 [140])
+                (plus:SI (reg:SI 5 r5 [140])
+                    (const_int 16 [0x10])))
+            (set (reg:SI 0 r0)
+                (mem:SI (reg:SI 5 r5 [140]) [1 dac_config[i_9]+0 S4 A32]))
+            (set (reg:SI 1 r1)
+                (mem:SI (plus:SI (reg:SI 5 r5 [140])
+                        (const_int 4 [0x4])) [1 dac_config[i_9]+4 S4 A32]))
+            (set (reg:SI 2 r2)
+                (mem:SI (plus:SI (reg:SI 5 r5 [140])
+                        (const_int 8 [0x8])) [1 dac_config[i_9]+8 S4 A32]))
+            (set (reg:SI 3 r3)
+                (mem:SI (plus:SI (reg:SI 5 r5 [140])
+                        (const_int 12 [0xc])) [1 dac_config[i_9]+12 S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 425 {*ldm4_ia_update}
+     (nil))
+(insn 40 39 41 3 (parallel [
+            (set (reg:SI 4 r4 [139])
+                (plus:SI (reg:SI 4 r4 [139])
+                    (const_int 16 [0x10])))
+            (set (mem:SI (reg:SI 4 r4 [139]) [1 stm32_dac_obj[i_9].DAC_Handler+0 S4 A32])
+                (reg:SI 0 r0))
+            (set (mem:SI (plus:SI (reg:SI 4 r4 [139])
+                        (const_int 4 [0x4])) [1 stm32_dac_obj[i_9].DAC_Handler+4 S4 A32])
+                (reg:SI 1 r1))
+            (set (mem:SI (plus:SI (reg:SI 4 r4 [139])
+                        (const_int 8 [0x8])) [1 stm32_dac_obj[i_9].DAC_Handler+8 S4 A32])
+                (reg:SI 2 r2))
+            (set (mem:SI (plus:SI (reg:SI 4 r4 [139])
+                        (const_int 12 [0xc])) [1 stm32_dac_obj[i_9].DAC_Handler+12 S4 A32])
+                (reg:SI 3 r3))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 428 {*stm4_ia_update}
+     (nil))
+(insn 41 40 42 3 (set (reg:SI 3 r3 [141])
+        (mem:SI (reg:SI 5 r5 [140]) [1 dac_config[i_9]+16 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 42 41 43 3 (set (mem:SI (reg:SI 4 r4 [139]) [1 stm32_dac_obj[i_9].DAC_Handler+16 S4 A32])
+        (reg:SI 3 r3 [141])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":192:38 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 43 42 44 3 (set (reg/f:SI 2 r2 [142])
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:41 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 44 43 45 3 (set (reg:SI 3 r3 [143])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:41 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 45 44 46 3 (parallel [
+            (set (reg:SI 1 r1 [145])
+                (const_int 88 [0x58]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:41 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 46 45 47 3 (set (reg:SI 3 r3 [144])
+        (mult:SI (reg:SI 1 r1 [145])
+            (reg:SI 3 r3 [143]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:41 56 {*mul}
+     (nil))
+(insn 47 46 48 3 (set (reg/f:SI 3 r3 [146])
+        (plus:SI (reg:SI 3 r3 [144])
+            (reg/f:SI 2 r2 [142]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:41 7 {*arm_addsi3}
+     (nil))
+(insn 48 47 49 3 (set (reg/f:SI 3 r3 [orig:113 _1 ] [113])
+        (mem/f:SI (reg/f:SI 3 r3 [146]) [2 stm32_dac_obj[i_9].DAC_Handler.Instance+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:41 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 49 48 50 3 (set (reg:SI 2 r2 [147])
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 12 [0xc]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:12 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 50 49 51 3 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 3 r3 [orig:113 _1 ] [113])
+            (reg:SI 2 r2 [147]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:12 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 51 50 52 3 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 56)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":194:12 273 {arm_cond_branch}
+     (nil)
+ -> 56)
+(note 52 51 53 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 55 4 (parallel [
+            (set (reg:SI 3 r3 [148])
+                (const_int 49 [0x31]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":196:25 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 55 53 56 4 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 3 [0x3])) [0 name_buf[3]+0 S1 A8])
+        (reg:QI 3 r3 [149])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":196:25 263 {*arm_movqi_insn}
+     (nil))
+(code_label 56 55 57 5 45 (nil) [1 uses])
+(note 57 56 58 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 59 5 (set (reg:SI 3 r3 [151])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 59 58 60 5 (parallel [
+            (set (reg:SI 2 r2 [152])
+                (const_int 88 [0x58]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 60 59 61 5 (set (reg:SI 3 r3 [150])
+        (mult:SI (reg:SI 2 r2 [152])
+            (reg:SI 3 r3 [151]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 56 {*mul}
+     (nil))
+(insn 61 60 62 5 (set (reg:SI 2 r2 [153])
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 62 61 63 5 (set (reg/f:SI 3 r3 [orig:114 _2 ] [114])
+        (plus:SI (reg:SI 3 r3 [150])
+            (reg:SI 2 r2 [153]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 7 {*arm_addsi3}
+     (nil))
+(insn 63 62 64 5 (set (reg:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:114 _2 ] [114])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 64 63 65 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DAC_Init") [flags 0x41]  <function_decl 07588e80 HAL_DAC_Init>) [0 HAL_DAC_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 65 64 67 5 (set (reg:SI 3 r3 [154])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 67 65 68 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:115 _3 ] [115])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:12 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 68 67 69 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 82)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":205:12 273 {arm_cond_branch}
+     (nil)
+ -> 82)
+(note 69 68 70 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 70 69 71 6 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 16 [0x10]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 71 70 72 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 72 71 73 6 (set (reg:SI 3 r3 [155])
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 73 72 74 6 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [155])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 74 73 75 6 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 20 [0x14]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 75 74 76 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 76 75 77 6 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 24 [0x18]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 77 76 78 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":207:13 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 78 77 79 6 (set (reg:SI 3 r3 [156])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":208:20 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 79 78 140 6 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [31 result+0 S4 A32])
+        (reg:SI 3 r3 [156])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":208:20 728 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 140 79 141 6 (set (pc)
+        (label_ref 116)) 284 {*arm_jump}
+     (nil)
+ -> 116)
+(barrier 141 140 82)
+(code_label 82 141 83 7 46 (nil) [1 uses])
+(note 83 82 84 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 84 83 85 7 (set (reg:SI 3 r3 [158])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 85 84 86 7 (parallel [
+            (set (reg:SI 2 r2 [159])
+                (const_int 88 [0x58]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 86 85 87 7 (set (reg:SI 3 r3 [157])
+        (mult:SI (reg:SI 2 r2 [159])
+            (reg:SI 3 r3 [158]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 56 {*mul}
+     (nil))
+(insn 87 86 88 7 (parallel [
+            (set (reg:SI 3 r3 [160])
+                (plus:SI (reg:SI 3 r3 [157])
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 1017 {*thumb2_addsi_short}
+     (nil))
+(insn 88 87 89 7 (set (reg:SI 2 r2 [162])
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 89 88 90 7 (set (reg:SI 3 r3 [161])
+        (plus:SI (reg:SI 3 r3 [160])
+            (reg:SI 2 r2 [162]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 7 {*arm_addsi3}
+     (nil))
+(insn 90 89 91 7 (parallel [
+            (set (reg/f:SI 0 r0 [orig:116 _4 ] [116])
+                (plus:SI (reg:SI 3 r3 [161])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 1017 {*thumb2_addsi_short}
+     (nil))
+(insn 91 90 92 7 (set (reg:SI 3 r3 [164])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:96 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 92 91 93 7 (parallel [
+            (set (reg:SI 2 r2 [165])
+                (const_int 88 [0x58]))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:96 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 93 92 94 7 (set (reg:SI 3 r3 [163])
+        (mult:SI (reg:SI 2 r2 [165])
+            (reg:SI 3 r3 [164]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:96 56 {*mul}
+     (nil))
+(insn 94 93 95 7 (set (reg:SI 2 r2 [166])
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:96 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 95 94 96 7 (set (reg/f:SI 3 r3 [orig:117 _5 ] [117])
+        (plus:SI (reg:SI 3 r3 [163])
+            (reg:SI 2 r2 [166]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:96 7 {*arm_addsi3}
+     (nil))
+(insn 96 95 98 7 (set (reg:SI 1 r1 [167])
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 98 96 101 7 (set (reg:SI 2 r2)
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 28 [0x1c]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 101 98 102 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_hw_dac_register") [flags 0x41]  <function_decl 0790c000 rt_hw_dac_register>) [0 rt_hw_dac_register S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 102 101 103 7 (set (reg:SI 3 r3 [orig:118 _6 ] [118])
+        (reg:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 103 102 104 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:118 _6 ] [118])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:16 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 104 103 105 7 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 116)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":213:16 273 {arm_cond_branch}
+     (nil)
+ -> 116)
+(note 105 104 106 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 106 105 107 8 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 16 [0x10]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 107 106 108 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 108 107 109 8 (set (reg:SI 3 r3 [168])
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 109 108 110 8 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [168])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 110 109 111 8 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 32 [0x20]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 111 110 112 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 112 111 113 8 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 159)
+                    (const_int 24 [0x18]))) [0  S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 728 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 113 112 114 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 06e4fb00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":219:17 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 114 113 115 8 (set (reg:SI 3 r3 [169])
+        (const_int -1 [0xffffffffffffffff])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":220:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 115 114 116 8 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [31 result+0 S4 A32])
+        (reg:SI 3 r3 [169])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":220:24 728 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 116 115 117 9 47 (nil) [2 uses])
+(note 117 116 118 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 118 117 119 9 (set (reg:SI 3 r3 [171])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:66 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 119 118 120 9 (parallel [
+            (set (reg:SI 3 r3 [170])
+                (plus:SI (reg:SI 3 r3 [171])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:66 1017 {*thumb2_addsi_short}
+     (nil))
+(insn 120 119 121 9 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])
+        (reg:SI 3 r3 [170])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:66 728 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 121 120 122 10 44 (nil) [1 uses])
+(note 122 121 124 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 124 122 125 10 (set (reg:SI 3 r3 [172])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [31 i+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:5 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 125 124 126 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [172])
+            (const_int 0 [0]))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 126 125 127 10 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 123)
+            (pc))) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":188:5 273 {arm_cond_branch}
+     (nil)
+ -> 123)
+(note 127 126 128 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 135 11 (set (reg:SI 3 r3 [orig:119 _18 ] [119])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [31 result+0 S4 A32])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":225:12 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 135 128 136 11 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:120 <retval> ] [120])) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":226:1 728 {*thumb2_movsi_vfp}
+     (nil))
+(insn 136 135 149 11 (use (reg/i:SI 0 r0)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":226:1 -1
+     (nil))
+(note 149 136 150 11 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 150 149 151 11 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":226:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 151 150 152 11 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":226:1 301 {blockage}
+     (nil))
+(insn/f 152 151 153 11 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":226:1 728 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 153 152 154 11 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":226:1 397 {force_register_use}
+     (nil))
+(jump_insn 154 153 155 11 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 16 [0x10])))
+            (set/f (reg:SI 4 r4)
+                (mem/c:SI (reg/f:SI 13 sp) [21  S4 A32]))
+            (set/f (reg:SI 5 r5)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [21  S4 A32]))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 8 [0x8])) [21  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 12 [0xc])) [21  S4 A32]))
+        ]) "D:\Desktop\rt-thread\bsp\stm32\libraries\HAL_Drivers\drv_dac.c":226:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (expr_list:REG_CFA_RESTORE (reg:SI 5 r5)
+            (expr_list:REG_CFA_RESTORE (reg:SI 4 r4)
+                (nil))))
+ -> return)
+(barrier 155 154 157)
+(code_label 157 155 158 51 (nil) [0 uses])
+(insn 158 157 159 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 385 {align_4}
+     (nil))
+(code_label 159 158 160 50 (nil) [0 uses])
+(insn 160 159 161 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0796dd68 *.LC6>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 161 160 162 (unspec_volatile [
+            (symbol_ref:SI ("stm32_dac_obj") [flags 0x2]  <var_decl 0790b898 stm32_dac_obj>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 162 161 163 (unspec_volatile [
+            (symbol_ref:SI ("dac_config") [flags 0x2]  <var_decl 0790b738 dac_config>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 163 162 164 (unspec_volatile [
+            (const_int 1073771520 [0x40007400])
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 164 163 165 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0796dc08 *.LC2>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 165 164 166 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0796ddc0 *.LC7>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 166 165 167 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0796dcb8 *.LC4>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 167 166 168 (unspec_volatile [
+            (symbol_ref:SI ("stm_dac_ops") [flags 0x2]  <var_decl 0790bdc0 stm_dac_ops>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 168 167 169 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0796de18 *.LC8>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 169 168 170 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 387 {consttable_end}
+     (nil))
+(barrier 170 169 143)
+(note 143 170 0 NOTE_INSN_DELETED)

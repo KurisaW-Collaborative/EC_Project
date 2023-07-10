@@ -1,0 +1,12 @@
+Log file created at: 2023/07/10 09:41:55  PID: 11440
+Running on machine: DESKTOP-R35582S
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0710 09:41:55.457494  2056 code_page.cpp:268] in function[Unisound::OutputDebugPrintf], version: V1.0.1 
+ 
+I0710 09:42:07.489579  2056 UniOneDebugToolDlg.cpp:957] in function[CUniOneDebugToolDlg::StartBurn], opening Serial Port 17 
+I0710 09:42:07.492578  2056 code_page.cpp:268] in function[Unisound::OutputDebugPrintf], COM put_setting 921600, N, 8, 1 port:17 
+ 
+I0710 09:42:09.886030 16192 code_page.cpp:268] in function[Unisound::OutputDebugPrintf], COM17 XmodermSendFile detected CCC, start send file 
+ 
+I0710 09:42:09.888032 16192 code_page.cpp:268] in function[Unisound::OutputDebugPrintf], COM17 ReadSendFile D:\Desktop\jx_firm\jx_firm\jx_su_03t_release_update.bin m_iTransferTimes finished 1361 
+ 
