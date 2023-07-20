@@ -53,27 +53,28 @@ void _uart_send_impl(int index)
     switch (index)
     {
         case posture:
-            data_frame = voice_data_number[posture].data_frame;
+			memcpy(data_frame,voice_data_number[posture].data_frame, sizeof(data_frame));
+            //data_frame = voice_data_number[posture].data_frame;
             data_frame_size = sizeof(voice_data_number[posture].data_frame);
             break;
         case fire_level1:
-            data_frame = voice_data_number[fire_level1].data_frame;
+			memcpy(data_frame,voice_data_number[fire_level1].data_frame, sizeof(data_frame));
             data_frame_size = sizeof(voice_data_number[fire_level1].data_frame);
             break;
         case fire_level2:
-            data_frame = voice_data_number[fire_level2].data_frame;
+			memcpy(data_frame,voice_data_number[fire_level2].data_frame, sizeof(data_frame));
             data_frame_size = sizeof(voice_data_number[fire_level2].data_frame);
             break;
         case weather_fin:
-            data_frame = voice_data_number[weather_fin].data_frame;
+			memcpy(data_frame,voice_data_number[weather_fin].data_frame, sizeof(data_frame));
             data_frame_size = sizeof(voice_data_number[weather_fin].data_frame);
             break;
         case monitor_fin:
-            data_frame = voice_data_number[monitor_fin].data_frame;
+			memcpy(data_frame,voice_data_number[monitor_fin].data_frame, sizeof(data_frame));
             data_frame_size = sizeof(voice_data_number[monitor_fin].data_frame);
             break;
         case low_battery:
-            data_frame = voice_data_number[low_battery].data_frame;
+			memcpy(data_frame,voice_data_number[low_battery].data_frame, sizeof(data_frame));
             data_frame_size = sizeof(voice_data_number[low_battery].data_frame);
             break;
         default:

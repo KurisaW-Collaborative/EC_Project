@@ -31,30 +31,30 @@ enum car_mode_set
 // 定义电机状态枚举
 enum MotorState
 {
-    MOTOR_STOP,                 // 停止
-    MOTOR_FORWARD,              // 向前运动
-    MOTOR_BACKWARD,             // 向后运动
-    MOTOR_LEFT,                 // 向左移动
-    MOTOR_RIGHT,                // 向右移动
-    MOTOR_FRONT_LEFT,           // 左前移动
-    MOTOR_FRONT_RIGHT,          // 右前移动
-    MOTOR_BACK_LEFT,            // 左后移动
-    MOTOR_BACK_RIGHT,           // 右后移动
-    MOTOR_CLOCKWISE_SPIN,       // 顺时针旋转
-    MOTOR_ANTICLOCKWISE_SPIN    // 逆时针旋转
+    MOTOR_STOP,                 // 停止:0
+    MOTOR_FORWARD,              // 向前运动:1
+    MOTOR_BACKWARD,             // 向后运动:2
+    MOTOR_LEFT,                 // 向左移动:3
+    MOTOR_RIGHT,                // 向右移动:4
+    MOTOR_FRONT_LEFT,           // 左前移动:5
+    MOTOR_FRONT_RIGHT,          // 右前移动:6
+    MOTOR_BACK_LEFT,            // 左后移动:7
+    MOTOR_BACK_RIGHT,           // 右后移动:8
+    MOTOR_CLOCKWISE_SPIN,       // 顺时针旋转:9
+    MOTOR_ANTICLOCKWISE_SPIN    // 逆时针旋转:10
 };
 
 // 电机速度控制相关参数结构体
 typedef struct
 {
     float Encoder;          // 编码器数值，读取电机实时速度
-    float Motor_Pwm;        // 电机PWM数值，控制电机实时速度
+//    int Motor_Pwm;        // 电机PWM数值，控制电机实时速度
     float Target;           // 电机目标速度值，控制电机目标速度
     float Velocity_KP;      // 速度控制PID参数
-    float   Velocity_KI;    // 速度控制PID参数
+    float Velocity_KI;    // 速度控制PID参数
 }Motor_parameter;
 
-void car_pwm_channel_set(int fl_sta, int fr_sta, int bl_sta, int br_sta);
 void car_control_mode_set(int status);
+void car_pwm_channel_init(void);
 
 #endif /* APPLICATIONS_CAR_CONTROL_H_ */

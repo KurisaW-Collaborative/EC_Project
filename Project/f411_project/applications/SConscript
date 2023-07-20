@@ -5,6 +5,24 @@ cwd     = GetCurrentDir()
 CPPPATH = [cwd]
 src = ['main.c']
 
+src += ['air_quality/air_quality_mtor.c']
+
+src += ['at_connect/at_server_user.c', 'at_connect/tcp_accept.c', 'at_connect/at_client_user.c']
+
+src += ['bh1750_lib/bh1750_config.c', 'bh1750_lib/bh1750.c']
+
+src += ['bmp280_lib/bmp280_read.c', 'bmp280_lib/bmp280.c']
+
+src += ['data_upload/data_upload.c']
+
+src += ['dht11_lib/dht11_read.c', 'dht11_lib/dht11.c']
+
+src += ['gps_analysis/gps_recv.c']
+
+src += ['noise_analysis/noise_mtor.c', 'noise_analysis/fliter.c']
+
+src += ['voice_command/voice_uart.c', 'voice_command/voice_ctrl.c']
+
 if GetDepend(['PKG_USING_RTDUINO']) and not GetDepend(['RTDUINO_NO_SETUP_LOOP']):
     src += ['arduino_main.cpp']
 

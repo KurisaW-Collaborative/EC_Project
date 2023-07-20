@@ -12,7 +12,7 @@
 #define __BOARD_H__
 
 #include <rtthread.h>
-#include <stm32f4xx.h>
+#include "stm32f4xx.h"
 #include "drv_common.h"
 #include "drv_gpio.h"
 
@@ -21,6 +21,15 @@ extern "C" {
 #endif
 
 ADC_HandleTypeDef hadc1;
+I2C_HandleTypeDef hi2c1;
+I2C_HandleTypeDef hi2c3;
+TIM_HandleTypeDef htim5;
+
+void Delay_us(uint16_t delay);
+void MX_TIM5_Init(void);
+void MX_GPIO_Init(void);
+void MX_I2C1_Init(void);
+void MX_I2C3_Init(void);
 
 #define STM32_FLASH_START_ADRESS     ((uint32_t)0x08000000)
 #define STM32_FLASH_SIZE             (512 * 1024)

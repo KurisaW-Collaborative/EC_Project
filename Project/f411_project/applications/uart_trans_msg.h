@@ -10,6 +10,8 @@
 #ifndef APPLICATIONS_UART_TRANS_MSG_H_
 #define APPLICATIONS_UART_TRANS_MSG_H_
 
+#include <rtthread.h>
+
 #define SAMPLE_UART_NAME       "uart1"      /* 串口设备名称 */
 
 /* 串口接收消息结构*/
