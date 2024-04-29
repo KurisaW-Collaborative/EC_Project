@@ -16,8 +16,6 @@
 
 #include "aht10_lib/aht10_read.h"
 
-struct AHT10_DATA   aht10_upload_struct;
-
 extern rt_mutex_t user_gps_mutex;
 extern char gps_upload_data[128];
 

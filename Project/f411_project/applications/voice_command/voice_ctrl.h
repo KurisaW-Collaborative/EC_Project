@@ -59,7 +59,7 @@ struct VOICE_TASK_FLAG
 };
 
 // 全局事件集，用于用户操作
-rt_event_t voice_event;
+extern rt_event_t voice_event;
 
 // 定义语音事件集
 #define EVENT_POSTURE       (1 << 0)

@@ -12,6 +12,7 @@
 #include <rtdevice.h>
 #include <board.h>
 #include "data_upload/data_upload.h"
+#include <at_device_esp8266.h>
 
 /* defined the LED0 pin: PA5 */
 #define LED0_PIN               GET_PIN(A, 5)
@@ -23,9 +24,9 @@ int main(void)
 
     // sensor init
     rt_kprintf("\n");
-    bmp280_drv_init();
-    bh1750_drv_init();
-    aht10_drv_init();
+//    bmp280_drv_init();
+//    bh1750_drv_init();
+//    aht10_drv_init();
 
     // AT config init
 #ifndef PKG_USING_AT_DEVICE
@@ -33,20 +34,21 @@ int main(void)
 //    esp8266_client_thread_init();
 #else
     esp8266_device_register();
+    rt_kprintf("esp8266 init!\n");
 #endif
 
     /* start thread schedule */
 
     // Abnormal data monitoring task
-    GP2Y_thread_start();
-    rt_kprintf("Air quality monitoring mission has been enabled!\n");
+//    GP2Y_thread_start();
+//    rt_kprintf("Air quality monitoring mission has been enabled!\n");
     // user open it
 //    LM386_thread_start();
 //    rt_kprintf("City noise monitoring task has been enabled!\n");
 
     // voice ctrl task
-    voice_thread_start();
-    rt_kprintf("The voice command recognition task has been enabled!\n");
+//    voice_thread_start();
+//    rt_kprintf("The voice command recognition task has been enabled!\n");
 
     // nmea analysis task, connect ready to use
 //    gps_thread_start();
@@ -59,7 +61,7 @@ int main(void)
 //    }
 //    onenet_set_cmd_rsp_cb(onenet_cmd_rsp_cb);
 //    rt_kprintf("Upload task has been enabled!\n");
-
+//
 //    onenet_upload_thread_start();
 //    rt_kprintf("Upload task has been enabled!\n");
 

@@ -7,11 +7,8 @@
  * Date           Author       Notes
  * 2023-06-04     Yifang       the first version
  */
-#include <stdio.h>
 #include <board.h>
 #include "bmp280_read.h"
-
-I2C_HandleTypeDef hi2c1;
 
 static BMP280_HandleTypedef bmp280;
 static float pressure_t, temperature_t, humidity_t;

@@ -11,6 +11,9 @@
 #include "voice_uart.h"
 #include "voice_ctrl.h"
 
+rt_device_t voice_serial;
+static struct rt_messagequeue voice_uart_rx_mq;
+
 extern struct VOICE_TASK_FLAG vocie_task_flag[6];
 extern rt_event_t voice_event;
 

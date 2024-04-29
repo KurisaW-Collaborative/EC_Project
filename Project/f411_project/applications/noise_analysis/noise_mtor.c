@@ -7,10 +7,6 @@
  * Date           Author       Notes
  * 2023-07-08     Yifang       the first version
  */
-#include <rtthread.h>
-#include <rtdevice.h>
-#include <board.h>
-
 #include "noise_mtor.h"
 #include "filter.h"
 #include "voice_command/voice_ctrl.h"

@@ -47,6 +47,7 @@ struct AHT10_DATA AHT10_read()
 float aht10_temp_take(void)
 {
     float temp = aht10_read_temperature(aht10_dev);
+//    rt_kprintf("temp:%f\n",temp);
 
     return temp;
 }
@@ -55,6 +56,7 @@ MSH_CMD_EXPORT(aht10_temp_take,aht10_temp_take);
 float aht10_humi_take(void)
 {
     float humi = aht10_read_humidity(aht10_dev);
+//    rt_kprintf("humi:%f\n",humi);
 
     return humi;
 }

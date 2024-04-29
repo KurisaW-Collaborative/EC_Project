@@ -10,8 +10,6 @@
 #ifndef APPLICATIONS_VOICE_UART_H_
 #define APPLICATIONS_VOICE_UART_H_
 
-#include <rtthread.h>
-
 #define VOICE_UART_NAME       "uart1"      /* 串口设备名称 */
 
 /* 串口接收消息结构*/
@@ -21,9 +19,8 @@ struct rx_msg
     rt_size_t size;
 };
 /* 串口设备句柄 */
-rt_device_t voice_serial;
+extern rt_device_t voice_serial;
 /* 消息队列控制块 */
-static struct rt_messagequeue voice_uart_rx_mq;
 
 int voice_thread_init(void);
 

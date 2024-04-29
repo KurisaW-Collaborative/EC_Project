@@ -8,8 +8,6 @@
  * 2023-06-05     Yifang       the first version
  */
 
-#include <rtthread.h>
-#include <rtdevice.h>
 #include <board.h>
 
 extern I2C_HandleTypeDef hi2c3;

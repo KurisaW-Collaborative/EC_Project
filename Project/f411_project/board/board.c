@@ -10,6 +10,11 @@
 
 #include "board.h"
 
+ADC_HandleTypeDef hadc1;
+I2C_HandleTypeDef hi2c1;
+I2C_HandleTypeDef hi2c3;
+TIM_HandleTypeDef htim5;
+
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};

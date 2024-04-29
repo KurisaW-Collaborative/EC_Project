@@ -5,36 +5,41 @@
  *
  * Change Logs:
  * Date           Author       Notes
- * 2018-11-5      SummerGift   first version
+ * 2018-11-06     SummerGift   first version
+ * 2019-01-08     AndeyQi      add stm32f446-st-nucleo bsp
  */
 
 #ifndef __BOARD_H__
 #define __BOARD_H__
 
 #include <rtthread.h>
-#include "stm32f4xx.h"
+#include <stm32g4xx.h>
+#include "drv_common.h"
 #include "drv_gpio.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-extern ADC_HandleTypeDef hadc1;
-extern I2C_HandleTypeDef hi2c1;
 extern I2C_HandleTypeDef hi2c3;
-extern TIM_HandleTypeDef htim5;
 
-void Delay_us(uint16_t delay);
-void MX_TIM5_Init(void);
-void MX_GPIO_Init(void);
-void MX_I2C1_Init(void);
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim5;
+extern TIM_HandleTypeDef htim8;
+extern TIM_HandleTypeDef htim15;
+
 void MX_I2C3_Init(void);
 
+void MX_TIM2_Init(void);
+void MX_TIM3_Init(void);
+void MX_TIM4_Init(void);
+void MX_TIM5_Init(void);
+void MX_TIM8_Init(void);
+void MX_TIM15_Init(void);
+
 #define STM32_FLASH_START_ADRESS     ((uint32_t)0x08000000)
-#define STM32_FLASH_SIZE             (512 * 1024)
+#define STM32_FLASH_SIZE             (128 * 1024)
 #define STM32_FLASH_END_ADDRESS      ((uint32_t)(STM32_FLASH_START_ADRESS + STM32_FLASH_SIZE))
 
-#define STM32_SRAM_SIZE           128
+#define STM32_SRAM_SIZE           96
 #define STM32_SRAM_END            (0x20000000 + STM32_SRAM_SIZE * 1024)
 
 #if defined(__ARMCC_VERSION)
@@ -51,10 +56,6 @@ extern int __bss_end;
 #define HEAP_END        STM32_SRAM_END
 
 void SystemClock_Config(void);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif
 

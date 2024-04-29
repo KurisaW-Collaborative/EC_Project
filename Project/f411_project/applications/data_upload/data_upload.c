@@ -21,6 +21,7 @@
 
 rt_thread_t onenet_thread;
 //rt_thread_t weather_thread;
+struct AHT10_DATA   aht10_upload_struct;
 
 static int cmd_flag = 0;
 
@@ -79,8 +80,8 @@ void mqtt_recv_data_start()
 {
     onenet_set_cmd_rsp_cb(onenet_cmd_rsp_cb);//设置接收回调函数
 }
-
 MSH_CMD_EXPORT(mqtt_recv_data_start,mqtt_recv_data_start);
+
 void mqtt_recv_data_stop()
 {
     onenet_set_cmd_rsp_cb(NULL);//设置接收回调函数
@@ -92,11 +93,13 @@ MSH_CMD_EXPORT(mqtt_recv_data_stop,mqtt_recv_data_stop);
 /* upload random value to temperature */
 static void onenet_upload_entry(void *parameter)
 {
+    rt_kprintf("onenet_upload is entry!\n");
+
     while (1)
     {
         if(cmd_flag == 1)
         {
-            LOG_I("----------------- Meteorological data collection task started -------------------");
+            LOG_I("|----------------- Meteorological data collection task started -------------------|");
             // 获取温度、湿度数值
 //            struct AHT10_DATA aht10_upload_struct = AHT10_read();
 //            weather_upload_struct[TEMP_INDEX].val = aht10_upload_struct.temperature;
@@ -127,7 +130,7 @@ static void onenet_upload_entry(void *parameter)
                 rt_thread_delay(rt_tick_from_millisecond(5 * 1000));
             }
 
-            LOG_I("-------------- The meteorological data collection task is terminated ------------");
+            LOG_I("|-------------- The meteorological data collection task is terminated ------------|");
 
             rt_thread_mdelay(20000);
         }
@@ -146,36 +149,36 @@ static void onenet_upload_entry(void *parameter)
     }
 }
 
-void weather_task_suspend(void)
-{
-    rt_err_t result = -RT_ERROR;
-    result = rt_thread_suspend(weather_thread);
-    if(result != RT_EOK)
-    {
-        rt_kprintf("weather thread suspend failed!\n");
-    }
-    rt_kprintf("weather task has been suspended!\n");
-}
-
-void weather_task_startup(void)
-{
-    rt_err_t result = -RT_EOK;
-    result = rt_thread_startup(weather_thread);
-    if(result != RT_EOK)
-    {
-        rt_kprintf("rt_thread_startup weather_thread failed!\n");
-    }
-}
+//void weather_task_suspend(void)
+//{
+//    rt_err_t result = -RT_ERROR;
+//    result = rt_thread_suspend(weather_thread);
+//    if(result != RT_EOK)
+//    {
+//        rt_kprintf("weather thread suspend failed!\n");
+//    }
+//    rt_kprintf("weather task has been suspended!\n");
+//}
+//
+//void weather_task_startup(void)
+//{
+//    rt_err_t result = -RT_EOK;
+//    result = rt_thread_startup(weather_thread);
+//    if(result != RT_EOK)
+//    {
+//        rt_kprintf("rt_thread_startup weather_thread failed!\n");
+//    }
+//}
 
 void onenet_upload_thread_start(void)
 {
-    weather_thread = rt_thread_create("weather_upload_th", weather_task_entry, RT_NULL, 2048, 22, 500);
-
-    if (weather_thread == RT_NULL)
-    {
-        rt_kprintf("weather_thread create failed!\n");
-    }
-    rt_kprintf("weather task has been created!\n");
+//    weather_thread = rt_thread_create("weather_upload_th", weather_task_entry, RT_NULL, 2048, 22, 500);
+//
+//    if (weather_thread == RT_NULL)
+//    {
+//        rt_kprintf("weather_thread create failed!\n");
+//    }
+//    rt_kprintf("weather task has been created!\n");
 
     onenet_thread = rt_thread_create("onenet_upload_th", onenet_upload_entry, RT_NULL, 2048, 23, 500);
     if (onenet_thread != RT_NULL)

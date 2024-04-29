@@ -7,9 +7,6 @@
  * Date           Author       Notes
  * 2023-07-08     Yifang       the first version
  */
-#include <rtthread.h>
-#include <rtdevice.h>
-
 #include "air_quality_mtor.h"
 #include "rtdef.h"
 #include "stdint.h"

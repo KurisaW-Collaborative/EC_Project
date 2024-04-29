@@ -12,6 +12,7 @@
 #include "voice_uart.h"
 
 extern rt_device_t voice_serial;
+rt_event_t voice_event;
 
 // 串口通信消息头
 const unsigned char g_uart_send_head[] = { 0xaa, 0x55 };

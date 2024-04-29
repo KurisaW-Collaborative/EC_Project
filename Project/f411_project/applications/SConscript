@@ -5,6 +5,8 @@ cwd     = GetCurrentDir()
 CPPPATH = [cwd]
 src = ['main.c']
 
+src += ['aht10_lib/aht10_read.c']
+
 src += ['air_quality/air_quality_mtor.c']
 
 src += ['at_connect/at_server_user.c', 'at_connect/tcp_accept.c', 'at_connect/at_client_user.c']
