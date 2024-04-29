@@ -1,0 +1,67 @@
+[0.041s] Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lang/Desktop/car_ws/src/key_car_control_cpp -DCMAKE_INSTALL_PREFIX=/home/lang/Desktop/car_ws/install/key_car_control_cpp
+[0.332s] -- The C compiler identification is GNU 9.4.0
+[0.577s] -- The CXX compiler identification is GNU 9.4.0
+[0.594s] -- Check for working C compiler: /usr/bin/cc
+[1.048s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.051s] -- Detecting C compiler ABI info
+[1.375s] -- Detecting C compiler ABI info - done
+[1.426s] -- Detecting C compile features
+[1.428s] -- Detecting C compile features - done
+[1.439s] -- Check for working CXX compiler: /usr/bin/c++
+[1.834s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.838s] -- Detecting CXX compiler ABI info
+[2.245s] -- Detecting CXX compiler ABI info - done
+[2.296s] -- Detecting CXX compile features
+[2.298s] -- Detecting CXX compile features - done
+[2.369s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[2.506s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.507s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[7.012s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[7.356s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.420s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[7.902s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[8.031s] -- Found FastRTPS: /opt/ros/foxy/include  
+[8.462s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.854s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[8.866s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.879s] -- Looking for pthread.h
+[9.593s] -- Looking for pthread.h - found
+[9.595s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[10.005s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[10.006s] -- Looking for pthread_create in pthreads
+[10.387s] -- Looking for pthread_create in pthreads - not found
+[10.388s] -- Looking for pthread_create in pthread
+[33.334s] -- Looking for pthread_create in pthread - found
+[33.338s] -- Found Threads: TRUE  
+[42.005s] -- Configuring done
+[42.034s] -- Generating done
+[42.040s] -- Build files have been written to: /home/lang/Desktop/car_ws/build/key_car_control_cpp
+[42.060s] Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lang/Desktop/car_ws/src/key_car_control_cpp -DCMAKE_INSTALL_PREFIX=/home/lang/Desktop/car_ws/install/key_car_control_cpp
+[42.124s] Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lang/Desktop/car_ws/build/key_car_control_cpp -- -j4 -l4
+[42.221s] [35m[1mScanning dependencies of target key_car_control_node[0m
+[42.917s] [ 50%] [32mBuilding CXX object CMakeFiles/key_car_control_node.dir/src/key_car_control_node.cpp.o[0m
+[119.151s] [100%] [32m[1mLinking CXX executable key_car_control_node[0m
+[128.357s] [100%] Built target key_car_control_node
+[128.551s] Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lang/Desktop/car_ws/build/key_car_control_cpp -- -j4 -l4
+[128.671s] Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lang/Desktop/car_ws/build/key_car_control_cpp
+[128.702s] -- Install configuration: ""
+[128.702s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/lib/key_car_control_cpp/key_car_control_node
+[128.707s] -- Set runtime path of "/home/lang/Desktop/car_ws/install/key_car_control_cpp/lib/key_car_control_cpp/key_car_control_node" to ""
+[128.707s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp//launch
+[128.708s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp//launch/key_car_control_launch.py
+[128.709s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/package_run_dependencies/key_car_control_cpp
+[128.709s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/parent_prefix_path/key_car_control_cpp
+[128.710s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/ament_prefix_path.sh
+[128.710s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/ament_prefix_path.dsv
+[128.711s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/path.sh
+[128.712s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/path.dsv
+[128.712s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.bash
+[128.713s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.sh
+[128.713s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.zsh
+[128.714s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.dsv
+[128.715s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/package.dsv
+[128.716s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/packages/key_car_control_cpp
+[128.716s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/cmake/key_car_control_cppConfig.cmake
+[128.717s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/cmake/key_car_control_cppConfig-version.cmake
+[128.718s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/package.xml
+[128.725s] Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lang/Desktop/car_ws/build/key_car_control_cpp

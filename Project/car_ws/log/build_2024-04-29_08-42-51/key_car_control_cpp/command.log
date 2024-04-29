@@ -1,0 +1,6 @@
+Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lang/Desktop/car_ws/src/key_car_control_cpp -DCMAKE_INSTALL_PREFIX=/home/lang/Desktop/car_ws/install/key_car_control_cpp
+Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lang/Desktop/car_ws/src/key_car_control_cpp -DCMAKE_INSTALL_PREFIX=/home/lang/Desktop/car_ws/install/key_car_control_cpp
+Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lang/Desktop/car_ws/build/key_car_control_cpp -- -j4 -l4
+Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lang/Desktop/car_ws/build/key_car_control_cpp -- -j4 -l4
+Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lang/Desktop/car_ws/build/key_car_control_cpp
+Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lang/Desktop/car_ws/build/key_car_control_cpp

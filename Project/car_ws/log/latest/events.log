@@ -1,0 +1,259 @@
+[0.000000] (-) TimerEvent: {}
+[0.000583] (key_car_control_cpp) JobQueued: {'identifier': 'key_car_control_cpp', 'dependencies': OrderedDict()}
+[0.000745] (key_car_control_cpp) JobStarted: {'identifier': 'key_car_control_cpp'}
+[0.033701] (key_car_control_cpp) JobProgress: {'identifier': 'key_car_control_cpp', 'progress': 'cmake'}
+[0.036118] (key_car_control_cpp) JobProgress: {'identifier': 'key_car_control_cpp', 'progress': 'build'}
+[0.038983] (key_car_control_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lang/Desktop/car_ws/build/key_car_control_cpp', '--', '-j4', '-l4'], 'cwd': '/home/lang/Desktop/car_ws/build/key_car_control_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'lang'), ('SSH_CLIENT', '192.168.3.29 56440 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib64:'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lang'), ('OLDPWD', '/home/lang/Desktop/car_ws/src'), ('SSH_TTY', '/dev/pts/2'), ('JETSON_L4T', '32.4.4'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Nano Developer Kit'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lang/Desktop/car_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lang'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (4 GB ram)'), ('JETSON_SERIAL_NUMBER', '1422619023422'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Porg'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra210'), ('AMENT_PREFIX_PATH', '/home/lang/Desktop/car_ws/install/key_car_control_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/lang/Desktop/car_ws/build/key_car_control_cpp'), ('SSH_CONNECTION', '192.168.3.29 56440 192.168.3.56 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lang/Desktop/car_ws/install/key_car_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '4.4.1'), ('CMAKE_PREFIX_PATH', '/home/lang/Desktop/car_ws/install/key_car_control_cpp:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3448-0000')]), 'shell': False}
+[0.096945] (-) TimerEvent: {}
+[0.197790] (-) TimerEvent: {}
+[0.299001] (-) TimerEvent: {}
+[0.312534] (key_car_control_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target key_car_control_node\x1b[0m\n'}
+[0.399213] (-) TimerEvent: {}
+[0.438776] (key_car_control_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/key_car_control_node.dir/src/key_car_control_node.cpp.o\x1b[0m\n'}
+[0.499444] (-) TimerEvent: {}
+[0.600172] (-) TimerEvent: {}
+[0.701230] (-) TimerEvent: {}
+[0.802342] (-) TimerEvent: {}
+[0.903015] (-) TimerEvent: {}
+[1.003767] (-) TimerEvent: {}
+[1.104575] (-) TimerEvent: {}
+[1.205375] (-) TimerEvent: {}
+[1.306095] (-) TimerEvent: {}
+[1.406842] (-) TimerEvent: {}
+[1.507676] (-) TimerEvent: {}
+[1.608809] (-) TimerEvent: {}
+[1.709906] (-) TimerEvent: {}
+[1.810712] (-) TimerEvent: {}
+[1.911487] (-) TimerEvent: {}
+[2.012211] (-) TimerEvent: {}
+[2.112942] (-) TimerEvent: {}
+[2.213683] (-) TimerEvent: {}
+[2.314409] (-) TimerEvent: {}
+[2.415125] (-) TimerEvent: {}
+[2.516223] (-) TimerEvent: {}
+[2.617017] (-) TimerEvent: {}
+[2.717761] (-) TimerEvent: {}
+[2.818503] (-) TimerEvent: {}
+[2.919223] (-) TimerEvent: {}
+[3.019959] (-) TimerEvent: {}
+[3.120670] (-) TimerEvent: {}
+[3.221454] (-) TimerEvent: {}
+[3.322189] (-) TimerEvent: {}
+[3.422892] (-) TimerEvent: {}
+[3.523618] (-) TimerEvent: {}
+[3.624319] (-) TimerEvent: {}
+[3.725057] (-) TimerEvent: {}
+[3.825871] (-) TimerEvent: {}
+[4.704289] (-) TimerEvent: {}
+[4.805407] (-) TimerEvent: {}
+[4.906133] (-) TimerEvent: {}
+[5.007050] (-) TimerEvent: {}
+[5.107791] (-) TimerEvent: {}
+[5.208526] (-) TimerEvent: {}
+[5.309407] (-) TimerEvent: {}
+[5.410325] (-) TimerEvent: {}
+[5.511060] (-) TimerEvent: {}
+[5.611826] (-) TimerEvent: {}
+[5.712494] (-) TimerEvent: {}
+[5.813249] (-) TimerEvent: {}
+[5.913982] (-) TimerEvent: {}
+[6.014825] (-) TimerEvent: {}
+[6.115539] (-) TimerEvent: {}
+[6.216332] (-) TimerEvent: {}
+[6.317116] (-) TimerEvent: {}
+[6.417905] (-) TimerEvent: {}
+[6.518685] (-) TimerEvent: {}
+[6.619450] (-) TimerEvent: {}
+[6.720283] (-) TimerEvent: {}
+[6.821036] (-) TimerEvent: {}
+[6.921784] (-) TimerEvent: {}
+[7.022628] (-) TimerEvent: {}
+[7.123378] (-) TimerEvent: {}
+[7.224106] (-) TimerEvent: {}
+[7.324865] (-) TimerEvent: {}
+[7.425592] (-) TimerEvent: {}
+[7.526369] (-) TimerEvent: {}
+[7.627094] (-) TimerEvent: {}
+[7.727781] (-) TimerEvent: {}
+[7.828456] (-) TimerEvent: {}
+[7.929180] (-) TimerEvent: {}
+[8.029912] (-) TimerEvent: {}
+[8.130714] (-) TimerEvent: {}
+[8.231424] (-) TimerEvent: {}
+[8.332154] (-) TimerEvent: {}
+[8.432874] (-) TimerEvent: {}
+[8.533527] (-) TimerEvent: {}
+[8.634195] (-) TimerEvent: {}
+[8.734944] (-) TimerEvent: {}
+[8.835606] (-) TimerEvent: {}
+[8.936317] (-) TimerEvent: {}
+[9.249144] (-) TimerEvent: {}
+[9.349877] (-) TimerEvent: {}
+[9.450663] (-) TimerEvent: {}
+[9.551402] (-) TimerEvent: {}
+[9.652199] (-) TimerEvent: {}
+[9.752940] (-) TimerEvent: {}
+[9.853659] (-) TimerEvent: {}
+[9.954433] (-) TimerEvent: {}
+[10.055072] (-) TimerEvent: {}
+[10.155720] (-) TimerEvent: {}
+[10.256362] (-) TimerEvent: {}
+[10.357008] (-) TimerEvent: {}
+[10.457667] (-) TimerEvent: {}
+[10.558405] (-) TimerEvent: {}
+[10.659046] (-) TimerEvent: {}
+[10.759745] (-) TimerEvent: {}
+[10.860456] (-) TimerEvent: {}
+[10.961192] (-) TimerEvent: {}
+[11.061897] (-) TimerEvent: {}
+[11.162681] (-) TimerEvent: {}
+[11.263387] (-) TimerEvent: {}
+[11.364033] (-) TimerEvent: {}
+[11.464738] (-) TimerEvent: {}
+[11.565439] (-) TimerEvent: {}
+[11.666085] (-) TimerEvent: {}
+[11.766805] (-) TimerEvent: {}
+[11.867509] (-) TimerEvent: {}
+[11.968211] (-) TimerEvent: {}
+[12.068925] (-) TimerEvent: {}
+[12.169739] (-) TimerEvent: {}
+[12.270461] (-) TimerEvent: {}
+[12.371162] (-) TimerEvent: {}
+[12.471829] (-) TimerEvent: {}
+[12.572615] (-) TimerEvent: {}
+[12.673329] (-) TimerEvent: {}
+[12.774031] (-) TimerEvent: {}
+[12.874838] (-) TimerEvent: {}
+[12.975691] (-) TimerEvent: {}
+[13.079122] (-) TimerEvent: {}
+[13.184184] (-) TimerEvent: {}
+[13.288523] (-) TimerEvent: {}
+[13.393021] (-) TimerEvent: {}
+[13.497118] (-) TimerEvent: {}
+[13.601091] (-) TimerEvent: {}
+[13.706942] (-) TimerEvent: {}
+[13.811659] (-) TimerEvent: {}
+[13.916844] (-) TimerEvent: {}
+[14.022127] (-) TimerEvent: {}
+[14.127909] (-) TimerEvent: {}
+[19.765789] (-) TimerEvent: {}
+[19.870974] (-) TimerEvent: {}
+[19.975908] (-) TimerEvent: {}
+[20.081024] (-) TimerEvent: {}
+[20.185800] (-) TimerEvent: {}
+[20.291091] (-) TimerEvent: {}
+[20.395466] (-) TimerEvent: {}
+[20.500379] (-) TimerEvent: {}
+[20.604606] (-) TimerEvent: {}
+[20.708978] (-) TimerEvent: {}
+[20.810999] (-) TimerEvent: {}
+[20.913341] (-) TimerEvent: {}
+[21.018697] (-) TimerEvent: {}
+[21.123355] (-) TimerEvent: {}
+[21.227584] (-) TimerEvent: {}
+[21.331917] (-) TimerEvent: {}
+[21.436244] (-) TimerEvent: {}
+[21.541332] (-) TimerEvent: {}
+[21.645810] (-) TimerEvent: {}
+[21.750720] (-) TimerEvent: {}
+[21.855028] (-) TimerEvent: {}
+[21.959333] (-) TimerEvent: {}
+[22.064033] (-) TimerEvent: {}
+[22.168798] (-) TimerEvent: {}
+[22.273816] (-) TimerEvent: {}
+[22.378149] (-) TimerEvent: {}
+[22.482924] (-) TimerEvent: {}
+[22.587135] (-) TimerEvent: {}
+[22.692105] (-) TimerEvent: {}
+[22.796915] (-) TimerEvent: {}
+[22.901957] (-) TimerEvent: {}
+[23.007113] (-) TimerEvent: {}
+[23.111923] (-) TimerEvent: {}
+[23.216626] (-) TimerEvent: {}
+[23.321194] (-) TimerEvent: {}
+[23.425789] (-) TimerEvent: {}
+[23.529979] (-) TimerEvent: {}
+[23.634668] (-) TimerEvent: {}
+[23.739167] (-) TimerEvent: {}
+[23.843981] (-) TimerEvent: {}
+[23.948324] (-) TimerEvent: {}
+[24.052957] (-) TimerEvent: {}
+[24.158081] (-) TimerEvent: {}
+[24.263071] (-) TimerEvent: {}
+[24.367219] (-) TimerEvent: {}
+[24.472066] (-) TimerEvent: {}
+[24.576732] (-) TimerEvent: {}
+[24.681347] (-) TimerEvent: {}
+[24.786055] (-) TimerEvent: {}
+[24.891164] (-) TimerEvent: {}
+[24.995871] (-) TimerEvent: {}
+[25.100605] (-) TimerEvent: {}
+[25.204977] (-) TimerEvent: {}
+[25.309603] (-) TimerEvent: {}
+[25.414184] (-) TimerEvent: {}
+[25.519035] (-) TimerEvent: {}
+[25.623501] (-) TimerEvent: {}
+[25.727939] (-) TimerEvent: {}
+[25.832658] (-) TimerEvent: {}
+[25.937313] (-) TimerEvent: {}
+[26.042118] (-) TimerEvent: {}
+[26.146866] (-) TimerEvent: {}
+[26.251382] (-) TimerEvent: {}
+[26.356184] (-) TimerEvent: {}
+[26.460858] (-) TimerEvent: {}
+[26.565218] (-) TimerEvent: {}
+[26.669646] (-) TimerEvent: {}
+[26.774796] (-) TimerEvent: {}
+[26.879053] (-) TimerEvent: {}
+[26.983619] (-) TimerEvent: {}
+[27.087956] (-) TimerEvent: {}
+[27.191276] (-) TimerEvent: {}
+[27.295885] (-) TimerEvent: {}
+[27.400501] (-) TimerEvent: {}
+[28.642833] (key_car_control_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable key_car_control_node\x1b[0m\n'}
+[28.643868] (-) TimerEvent: {}
+[28.744728] (-) TimerEvent: {}
+[28.845524] (-) TimerEvent: {}
+[28.946696] (-) TimerEvent: {}
+[29.047467] (-) TimerEvent: {}
+[29.148169] (-) TimerEvent: {}
+[29.248864] (-) TimerEvent: {}
+[29.297754] (key_car_control_cpp) StdoutLine: {'line': b'[100%] Built target key_car_control_node\n'}
+[29.349082] (-) TimerEvent: {}
+[29.449769] (-) TimerEvent: {}
+[29.460206] (key_car_control_cpp) CommandEnded: {'returncode': 0}
+[29.537915] (key_car_control_cpp) JobProgress: {'identifier': 'key_car_control_cpp', 'progress': 'install'}
+[29.550114] (-) TimerEvent: {}
+[29.579011] (key_car_control_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lang/Desktop/car_ws/build/key_car_control_cpp'], 'cwd': '/home/lang/Desktop/car_ws/build/key_car_control_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'lang'), ('SSH_CLIENT', '192.168.3.29 56440 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib64:'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lang'), ('OLDPWD', '/home/lang/Desktop/car_ws/src'), ('SSH_TTY', '/dev/pts/2'), ('JETSON_L4T', '32.4.4'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Nano Developer Kit'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lang/Desktop/car_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lang'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (4 GB ram)'), ('JETSON_SERIAL_NUMBER', '1422619023422'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Porg'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra210'), ('AMENT_PREFIX_PATH', '/home/lang/Desktop/car_ws/install/key_car_control_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/lang/Desktop/car_ws/build/key_car_control_cpp'), ('SSH_CONNECTION', '192.168.3.29 56440 192.168.3.56 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lang/Desktop/car_ws/install/key_car_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '4.4.1'), ('CMAKE_PREFIX_PATH', '/home/lang/Desktop/car_ws/install/key_car_control_cpp:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3448-0000')]), 'shell': False}
+[29.610129] (key_car_control_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.611098] (key_car_control_cpp) StdoutLine: {'line': b'-- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/lib/key_car_control_cpp/key_car_control_node\n'}
+[29.616059] (key_car_control_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/lang/Desktop/car_ws/install/key_car_control_cpp/lib/key_car_control_cpp/key_car_control_node" to ""\n'}
+[29.616889] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp//launch\n'}
+[29.617531] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp//launch/key_car_control_launch.py\n'}
+[29.618190] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/package_run_dependencies/key_car_control_cpp\n'}
+[29.618773] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/parent_prefix_path/key_car_control_cpp\n'}
+[29.619321] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/ament_prefix_path.sh\n'}
+[29.619744] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/ament_prefix_path.dsv\n'}
+[29.620220] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/path.sh\n'}
+[29.620750] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/path.dsv\n'}
+[29.621165] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.bash\n'}
+[29.621572] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.sh\n'}
+[29.621926] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.zsh\n'}
+[29.622378] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.dsv\n'}
+[29.622839] (key_car_control_cpp) StdoutLine: {'line': b'-- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/package.dsv\n'}
+[29.623282] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/packages/key_car_control_cpp\n'}
+[29.623717] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/cmake/key_car_control_cppConfig.cmake\n'}
+[29.624154] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/cmake/key_car_control_cppConfig-version.cmake\n'}
+[29.624593] (key_car_control_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/package.xml\n'}
+[29.627486] (key_car_control_cpp) CommandEnded: {'returncode': 0}
+[29.650684] (-) TimerEvent: {}
+[29.751346] (-) TimerEvent: {}
+[29.852255] (-) TimerEvent: {}
+[29.952996] (-) TimerEvent: {}
+[30.053642] (-) TimerEvent: {}
+[30.154439] (-) TimerEvent: {}
+[30.255151] (-) TimerEvent: {}
+[30.355895] (-) TimerEvent: {}
+[30.457041] (-) TimerEvent: {}
+[30.552221] (key_car_control_cpp) JobEnded: {'identifier': 'key_car_control_cpp', 'rc': 0}
+[30.555990] (-) EventReactorShutdown: {}

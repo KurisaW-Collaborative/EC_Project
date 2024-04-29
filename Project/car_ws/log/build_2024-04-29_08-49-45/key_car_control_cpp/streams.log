@@ -1,0 +1,28 @@
+[0.041s] Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lang/Desktop/car_ws/build/key_car_control_cpp -- -j4 -l4
+[0.312s] [35m[1mScanning dependencies of target key_car_control_node[0m
+[0.438s] [ 50%] [32mBuilding CXX object CMakeFiles/key_car_control_node.dir/src/key_car_control_node.cpp.o[0m
+[28.643s] [100%] [32m[1mLinking CXX executable key_car_control_node[0m
+[29.297s] [100%] Built target key_car_control_node
+[29.460s] Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lang/Desktop/car_ws/build/key_car_control_cpp -- -j4 -l4
+[29.580s] Invoking command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lang/Desktop/car_ws/build/key_car_control_cpp
+[29.610s] -- Install configuration: ""
+[29.611s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/lib/key_car_control_cpp/key_car_control_node
+[29.616s] -- Set runtime path of "/home/lang/Desktop/car_ws/install/key_car_control_cpp/lib/key_car_control_cpp/key_car_control_node" to ""
+[29.617s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp//launch
+[29.617s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp//launch/key_car_control_launch.py
+[29.618s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/package_run_dependencies/key_car_control_cpp
+[29.618s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/parent_prefix_path/key_car_control_cpp
+[29.619s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/ament_prefix_path.sh
+[29.619s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/ament_prefix_path.dsv
+[29.620s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/path.sh
+[29.620s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/environment/path.dsv
+[29.621s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.bash
+[29.621s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.sh
+[29.621s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.zsh
+[29.622s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/local_setup.dsv
+[29.622s] -- Installing: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/package.dsv
+[29.623s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/ament_index/resource_index/packages/key_car_control_cpp
+[29.623s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/cmake/key_car_control_cppConfig.cmake
+[29.624s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/cmake/key_car_control_cppConfig-version.cmake
+[29.624s] -- Up-to-date: /home/lang/Desktop/car_ws/install/key_car_control_cpp/share/key_car_control_cpp/package.xml
+[29.628s] Invoked command in '/home/lang/Desktop/car_ws/build/key_car_control_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lang/Desktop/car_ws/build/key_car_control_cpp
